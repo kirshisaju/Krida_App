@@ -30,6 +30,7 @@ import TrainingSchedule from 'app/screens/TrainingSchedule';
 import Applesignup from 'app/screens/Login/applesignup';
 import Clubdetail from 'app/screens/Clubdetail';
 import NewClub from 'app/screens/NewClub';
+import SearchClub from 'app/screens/Searchclub';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -218,13 +219,13 @@ const LoggedInNavigator = () => (
                                                         headerRight: () => <ThemeController />,
                                                         }} />  
                                                                                                                                                            
-   {/* <Stack.Screen name="Club" component={Club} options={{
-                                                        title: 'Club',
+ <Stack.Screen name="SearchClub" component={SearchClub} options={{
+                                                        title: 'SearchClub',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
                                                         headerRight: () => <ThemeController />,
-                                                        }} /> */}
+                                                        }} />
   </LoggedInStack.Navigator>
 );
 

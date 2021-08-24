@@ -41,3 +41,9 @@ export function logOut() {
     type: types.LOG_OUT,
   };
 }
+export function clubcreate() {
+  return {
+    type: types.CLUB_CREATE,
+  };
+}
+

@@ -36,13 +36,13 @@ marginBottom:50,
       padding:0,
     },
     fab: {
+ 
       position: 'absolute',
-      margin: 30,
+      margin: 90,
       right: 0,
       bottom: -50,
       backgroundColor:'#FF8500',
-      color:"#fff",
-   
+      color:"#fff"
     },
     eventcardimg:{
     width:'100%',
