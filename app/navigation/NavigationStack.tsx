@@ -31,6 +31,10 @@ import Applesignup from 'app/screens/Login/applesignup';
 import Clubdetail from 'app/screens/Clubdetail';
 import NewClub from 'app/screens/NewClub';
 import SearchClub from 'app/screens/Searchclub';
+import ManageClub from 'app/screens/ManageClub';
+import CourtBooking from 'app/screens/CourtBooking';
+import NewCourtBooking from 'app/screens/NewCourtBooking';
+import StockManagement from 'app/screens/StockManagements';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -221,6 +225,34 @@ const LoggedInNavigator = () => (
                                                                                                                                                            
  <Stack.Screen name="SearchClub" component={SearchClub} options={{
                                                         title: 'SearchClub',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />
+   <Stack.Screen name="ManageClub" component={ManageClub} options={{
+                                                        title: 'ManageClub',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />
+      <Stack.Screen name="CourtBooking" component={CourtBooking} options={{
+                                                        title: 'CourtBooking',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />
+         <Stack.Screen name="NewCourtBooking" component={NewCourtBooking} options={{
+                                                        title: 'NewCourtBooking',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />
+         <Stack.Screen name="StockManagement" component={StockManagement} options={{
+                                                        title: 'StockManagement',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
