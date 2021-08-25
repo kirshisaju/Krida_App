@@ -28,19 +28,40 @@ const styles = StyleSheet.create({
  
   },
   shawd:{
-    width:150,  margin:10,padding:10,
+    width:120,  margin:10,padding:10,
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 1 },
-    shadowRadius: 15,  
+    shadowRadius: 20,  
     elevation: 5
     },
     fab: {
+      backgroundColor:"#EC7961",
+      color:"#fff",
       position: 'absolute',
-      margin: 16,
-      right: 0,
-      bottom: 0,
+      margin: 0,
+      right: 10,
+      bottom: -55,
+      width:50,
+      height:50,
+      padding:5,
+      zIndex:99899999,
+      
     },
-  
+    shield:{
+      backgroundColor:'#E75A1A',
+      color:"#fff",
+      borderRadius:50,
+      marginTop:10,
+      width:45,
+      height:45,
+      fontSize:40,
+      },
+    shieldpink:{
+      backgroundColor:"#EE16ED",
+    },
+    shieldgreen:{
+      backgroundColor:"#58B012", 
+    },
  
 });
 
