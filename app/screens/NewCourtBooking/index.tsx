@@ -72,10 +72,9 @@ const NewCourtBooking: React.FC = () => {
     </Button>
 </View>    
 
-    <View> 
-    <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Venue Address</Text>
+    <View style={{marginTop:10}}> 
     <DropDown style = {styles.inputsfull}
-          label={"Select an address from the list"}
+          label={"Venue Address"}
           mode={"outlined"}
           value={gender}
           setValue={setGender}

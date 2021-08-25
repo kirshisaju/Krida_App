@@ -94,7 +94,7 @@ const renderLabel = ({route, focused}) =>
         )}
         />
         <View style={{paddingHorizontal:15}}>
-        <Searchbar style={{marginTop:20,borderWidth:0,borderColor:'#fff',}}
+        <Searchbar style={{marginTop:20,elevation: 0, borderBottomColor:'#ddd', borderBottomWidth:2,}}
       placeholder="Search"
       onChangeText={onChangeSearch}
       value={searchQuery}
@@ -108,9 +108,9 @@ const renderLabel = ({route, focused}) =>
       <Paragraph style={{color:'#fff',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
       </Col>
       <Col size={70}>
-      <Text style={{color:'#000537',fontSize:14,fontWeight:'bold'}}>7:00 - 9:00 AM</Text>
-      <Paragraph style={{color:'#000537',fontSize:12,}}>Sportspark University of East, Nor...</Paragraph>
-      <Paragraph style={{color:'#000537',fontSize:10,opacity:.5}}>Courts 1, 5</Paragraph>
+      <Text style={{color:'#000537',fontSize:14,fontWeight:'bold',margin:0,padding:0}}>7:00 - 9:00 AM</Text>
+      <Paragraph style={{color:'#000537',fontSize:12,margin:0,padding:0}}>Sportspark University of East, Nor...</Paragraph>
+      <Paragraph style={{color:'#000537',fontSize:10,opacity:.5,margin:0,padding:0}}>Courts 1, 5</Paragraph>
       </Col>
       <Col size={15}>
       <List.Icon icon="dots-vertical" />
