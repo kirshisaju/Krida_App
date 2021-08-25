@@ -38,10 +38,13 @@ marginBottom:50,
     fab: {
       position: 'absolute',
       margin: 30,
-      right: 0,
+      right: -20,
       bottom: -50,
       backgroundColor:'#FF8500',
       color:"#fff",
+      width:50,
+      height:50,
+      padding:5
    
     },
     eventcardimg:{

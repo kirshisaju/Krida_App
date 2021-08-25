@@ -95,13 +95,14 @@ const Myclubs: React.FC = () => {
         right={props => <List.Icon {...props} icon="chevron-right" />}
       />
     
-
+<View style={{marginBottom:50,marginTop:40}}>
       <FAB 
           style={styles.fab}
           small
           icon="plus"
           onPress={onNewClub}
         /> 
+        </View>
         <>
         <Dialog visible={visibles} onDismiss={hideDialog2}>
       <>
