@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ScrollView, Switch, TouchableOpacity, View } from 'react-native';
-import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip, Card, Badge, Paragraph, FAB } from 'react-native-paper';
+import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip, Card, Badge, Paragraph, FAB, Portal } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
 
 import * as loginActions from 'app/store/actions/loginActions';
@@ -30,9 +30,9 @@ const StockManagement: React.FC = () => {
   const id = useSelector((state: IState) => state.loginReducer.id);
   
   const dispatch = useDispatch();
-  const [visible1, setVisible1] = React.useState(false);
-  const showDialog1 = () => setVisible1(true);
-  const hideDialog1= () => setVisible1(false);
+  const [visible, setVisible] = React.useState(false);
+  const showDialog = () => setVisible(true);
+  const hideDialog= () => setVisible(false);
   const [text, setText] = React.useState('');
   const [showDropDown, setShowDropDown] = React.useState(false);
   const [visible2, setVisible2] = React.useState(false);
@@ -159,11 +159,43 @@ const StockManagement: React.FC = () => {
     style={styles.fab}
     small
     icon="plus"
-    onPress={() => console.log('Pressed')}
+    onPress={showDialog}
   />
   </Col>
   </Grid>
       </View> 
+      <Portal>
+        <Dialog visible={visible} onDismiss={hideDialog}>
+           <List.Item
+                title="6.00 - 7.00 pm "
+                description="SpartSpark University Of East"
+                left={props => <List.Icon {...props} icon="close"  />}
+                right={props => <List.Icon {...props} icon="share-google"  />}
+              />
+        <Grid>
+            <Col size={25}><Text >user</Text></Col>
+            <Col size={50}><Switch /></Col>
+            <Col size={25}><List.Icon icon="share-google"/></Col>
+        </Grid>
+
+        <Card.Title  style={styles.cardtitle}
+            title="7-9 Tomarrow,23 April"
+            left={(props) => <List.Icon {...props} icon="calendar"/>}
+            />
+        <Card.Title  style={styles.cardtitle}
+            title="Spot Spark University Of East"
+            left={(props) => <List.Icon {...props} icon="angle-right"/>}
+            right={(props) => <List.Icon {...props} icon="chevron-right"/>}
+            />
+        <Card.Title  style={styles.cardtitle}
+            title="7-9 Tomarrow,23 April"
+            left={(props) => <List.Icon {...props} icon="calendar" />}
+            />
+        <Dialog.Actions>
+            <Button onPress={hideDialog}><Text>Done</Text></Button>
+        </Dialog.Actions>
+        </Dialog>
+      </Portal>
     </ScrollView>
 
 
