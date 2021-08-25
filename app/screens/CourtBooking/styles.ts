@@ -119,10 +119,10 @@ marginTop:90,
   },
   borderClubs:{
   borderColor: "#ddd",
-  borderWidth: 1,
+  borderBottomWidth: 1,
   marginTop:20,
   borderRadius: 9,
-  padding:10,
+  paddingBottom:20,
   },
   borderscore:{
       borderColor: "#ddd",
@@ -155,11 +155,16 @@ marginTop:90,
       justifyContent: "center",
   } ,
   fab: {
+    backgroundColor:"#EC7961",
+    color:"#fff",
     position: 'absolute',
     margin: 0,
-    right: 0,
-    bottom: 0,
-    marginTop:40
+    right: 10,
+    bottom: -60,
+    width:50,
+    height:50,
+    padding:5
+    
   },
  
 });

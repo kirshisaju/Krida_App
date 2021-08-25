@@ -39,22 +39,22 @@ const NewCourtBooking: React.FC = () => {
   const sheetRef = React.useRef(null);
   return (
     <ScrollView>
-      
+      <View style={{backgroundColor:"#fff",paddingHorizontal:15}}>
       <CalendarStrip style={{ paddingTop: 12, marginTop: 15, paddingBottom:12, borderColor:'#aaa', borderTopWidth:1, borderBottomWidth:1 }} />
   
       <Text style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Select Club Type *</Text>     
 <View style={{ flexDirection:'row' ,alignItems: 'flex-start',flexWrap: 'wrap',}}>
 
-  <Chip   style={{ marginTop:10,paddingLeft:10 ,backgroundColor:"red",borderWidth:1,borderColor:"#ccc"}} >Court 1</Chip>
-  <Chip  style={{ marginTop:10,paddingLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 2</Chip>
-  <Chip   style={{ marginTop:10, paddingLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 3</Chip>
-  <Chip   style={{ marginTop:10, paddingLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 4</Chip>
-
+  <Chip   style={{ marginTop:10,backgroundColor:"#E75333",borderWidth:1,borderColor:"#ccc"}} >Court 1</Chip>
+  <Chip  style={{ marginTop:10,marginLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 2</Chip>
+  <Chip   style={{ marginTop:10, marginLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 3</Chip>
+  <Chip   style={{ marginTop:10, marginLeft:10 ,backgroundColor:"#fff",borderWidth:1,borderColor:"#ccc"}}  >Court 4</Chip>
+<Text style={{color:"#E75333",fontSize:12,marginTop:10}}>Add More Courts</Text>
 
 </View>
  
 <View>
-  <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Venue</Text>
+  <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:15,marginBottom:5}}>Venue</Text>
   </View>
   <View style={{ flexDirection:'row' ,alignItems: 'flex-start',flexWrap: 'wrap',}}>
  <TextInput style = {styles.inputs}  
@@ -99,21 +99,17 @@ const NewCourtBooking: React.FC = () => {
     autoCapitalize = "none"
     > 
       </TextInput>
-     
+      <Text style={{color:"#E75333",fontSize:12,marginTop:10}}>Add Session Players</Text>
     </View>  
-    <View style={{ flexDirection:'row' ,alignItems: 'flex-start',flexWrap: 'wrap'}}>
-    <Button  mode="contained" onPress={() => console.log('Pressed')}
-    style={{ width:150,marginLeft:40,marginTop:40}}>
-    SAVE & Add NEW
-  </Button>
-  <Button mode="contained" onPress={() => console.log('Pressed')}
-    style={{ width:150,marginLeft:40,marginTop:40}}>
-    SAVE
-  </Button>
-    </View> 
-
-
-
+    <View  style={{flex: 1, flexDirection: 'row', marginTop:30,marginBottom:20}}>
+      <View>
+        <Button mode="contained" onPress={() => console.log('Pressed')} style = {styles.inputaddnew}  > SAVE & ADD NEW</Button>
+      </View>
+      <View>
+         <Button mode="contained" onPress={() => console.log('Pressed')} style = {styles.inputdone}  > SAVE</Button>
+      </View>
+    </View>
+    </View>
    </ScrollView>   
    
   );

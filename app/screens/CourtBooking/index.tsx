@@ -74,7 +74,7 @@ const renderLabel = ({route, focused}) =>
   return (
 
 
-<View >
+<View style={{backgroundColor:'#fff'}}>
 <ScrollView>
 <TabView
         swipeEnabled={false}
@@ -93,14 +93,17 @@ const renderLabel = ({route, focused}) =>
           />
         )}
         />
-<Searchbar style={{marginTop:20,borderWidth:0}}
+        <View style={{paddingHorizontal:15}}>
+        <Searchbar style={{marginTop:20,borderWidth:0,borderColor:'#fff',}}
       placeholder="Search"
       onChangeText={onChangeSearch}
       value={searchQuery}
-    />  
-     
+    />
+        </View>
+  
+        <View style={{paddingHorizontal:15}}>
      <Grid style={styles.borderClubs}>
-     <Col size={15} style={styles.bgnumber}>
+     <Col size={15} style={styles.bgnumberblue}>
       <Text style={{color:'#fff',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
       <Paragraph style={{color:'#fff',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
       </Col>
@@ -114,7 +117,7 @@ const renderLabel = ({route, focused}) =>
      </Col>
 </Grid> 
 <Grid style={styles.borderClubs}>
-     <Col size={15} style={styles.bgnumber}>
+     <Col size={15} style={styles.bgnumberblue}>
       <Text style={{color:'#fff',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
       <Paragraph style={{color:'#fff',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
       </Col>
@@ -128,7 +131,7 @@ const renderLabel = ({route, focused}) =>
      </Col>
 </Grid> 
 <Grid style={styles.borderClubs}>
-     <Col size={15} style={styles.bgnumber}>
+     <Col size={15} style={styles.bgnumberblue}>
       <Text style={{color:'#fff',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
       <Paragraph style={{color:'#fff',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
       </Col>
@@ -141,7 +144,7 @@ const renderLabel = ({route, focused}) =>
       <List.Icon icon="dots-vertical" />
      </Col>
 </Grid> 
-
+</View>
 </ScrollView>
 <FAB
     style={styles.fab}
