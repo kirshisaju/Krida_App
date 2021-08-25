@@ -29,6 +29,10 @@ const Myclubs: React.FC = () => {
   const onClubdetail = () => NavigationService.navigate('Clubdetail');
   const onClubsetup = () => NavigationService.navigate('Clubsetup');
   const onSearchClub = () => NavigationService.navigate('SearchClub');
+  const onManageClub = () => NavigationService.navigate('ManageClub');
+  const onCourtBooking = () => NavigationService.navigate('CourtBooking');
+  const onNewCourtBooking = () => NavigationService.navigate('NewCourtBooking');
+  const onStockManagement = () => NavigationService.navigate('StockManagement');
 
   const [visibles, setVisibles] = React.useState(false);
   const showDialog2 = () => setVisibles(true);
@@ -57,6 +61,20 @@ const Myclubs: React.FC = () => {
       onChangeText={onChangeSearch}
       value={searchQuery}
     /> 
+      <Button 
+      icon="camera" mode="contained" onPress={onManageClub}>
+    Press me
+  </Button>
+  <Button icon="camera" mode="contained" onPress={onCourtBooking}>
+  Court Booking
+  </Button>
+  <Button icon="camera" mode="contained" onPress={onNewCourtBooking}>
+  New Court Booking
+  </Button>
+  <Button icon="camera" mode="contained" onPress={onStockManagement}>
+  Stock Management
+  </Button>
+
     <Text style={styles.clubs}>My Clubs</Text>  
      <List.Item style={styles.borderClubs} onPress={onClubdetail}
        titleStyle={{fontSize:15, fontWeight:'bold'}}
@@ -72,6 +90,7 @@ const Myclubs: React.FC = () => {
         left={props =>  <Avatar.Icon size={24} icon="shield" style={styles.ShieldOrange}/>}
         right={props => <List.Icon {...props} icon="chevron-right" />}
       />
+    
 
       <FAB 
           style={styles.fab}
