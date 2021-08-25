@@ -218,14 +218,14 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />  
-                                                                                                                                                           
- <Stack.Screen name="SearchClub" component={SearchClub} options={{
-                                                        title: 'SearchClub',
-                                                        headerTitleStyle: {
-                                                          fontWeight: 'bold',
-                                                        },
-                                                        headerRight: () => <ThemeController />,
-                                                        }} />
+                                                                                                                                                                      
+            <Stack.Screen name="SearchClub" component={SearchClub} options={{
+                                                                    title: 'SearchClub',
+                                                                    headerTitleStyle: {
+                                                                      fontWeight: 'bold',
+                                                                    },
+                                                                    headerRight: () => <ThemeController />,
+                                                                    }} />
   </LoggedInStack.Navigator>
 );
 

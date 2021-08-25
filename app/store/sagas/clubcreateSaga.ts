@@ -9,11 +9,11 @@ import { put, call } from 'redux-saga/effects';
 
 import { Alert } from 'react-native';
 import ClubUser from 'app/services/ClubUser';
-import * as loginActions from 'app/store/actions/loginActions';
+import * as ClubcreateAction from 'app/store/actions/ClubcreateAction';
 
 // Our worker Saga that logins the user
-export default function* loginAsync( action:any ): any {
-  yield put(loginActions.enableLoader());
+export default function* ClubCreateAsync( action:any ): any {
+  yield put(ClubcreateAction.enableLoader());
   
   //how to call api
   const response = yield call(ClubUser, action.token );
@@ -21,14 +21,14 @@ export default function* loginAsync( action:any ): any {
   //const response = { success: true, data: { id: 1 }, message: 'Success' };
 
   if (response.status) {
-    yield put(loginActions.onLoginResponse(response.data));
-    yield put(loginActions.disableLoader());
+    //yield put(ClubcreateAction.onClubcreateresponse(response.data));
+    yield put(ClubcreateAction.disableLoader());
 
     // no need to call navigate as this is handled by redux store with SwitchNavigator
     //yield call(navigationActions.navigateToHome);
   } else {
-    yield put(loginActions.loginFailed());
-    yield put(loginActions.disableLoader());
+    //yield put(ClubcreateAction.createFailed());
+    yield put(ClubcreateAction.disableLoader());
     setTimeout(() => {
       //Alert.alert('BoilerPlate', response);
       //Alert.alert('BoilerPlate', response);
