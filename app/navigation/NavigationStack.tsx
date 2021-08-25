@@ -32,10 +32,12 @@ import ManageClub from 'app/screens/ManageClub';
 import CourtBooking from 'app/screens/CourtBooking';
 import NewCourtBooking from 'app/screens/NewCourtBooking';
 import StockManagement from 'app/screens/StockManagements';
-import ManageStock from 'app/screens/ManageStock';
+
 import NewExpense from 'app/screens/NewExpense';
 import SelectMembers from 'app/screens/SelectMembers';
 import ManageMembers from 'app/screens/ManageMembers';
+import MyClubLanding from 'app/screens/MyClubLanding';
+import NewExpenses from 'app/screens/NewExpenses';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -259,8 +261,8 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />
-        <Stack.Screen name="ManageStock" component={ManageStock} options={{
-                                                        title: 'ManageStock',
+        <Stack.Screen name="MyClubLanding" component={MyClubLanding} options={{
+                                                        title: 'MyClubLanding',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
@@ -286,7 +288,14 @@ const LoggedInNavigator = () => (
                                                           fontWeight: 'bold',
                                                         },
                                                         headerRight: () => <ThemeController />,
-                                                        }} />                                                                                                    
+                                                        }} />  
+        <Stack.Screen name="NewExpenses" component={NewExpenses} options={{
+                                                        title: 'NewExpenses',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />                                                                                                         
   </LoggedInStack.Navigator>
 );
 

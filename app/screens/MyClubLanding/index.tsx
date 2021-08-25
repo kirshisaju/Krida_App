@@ -26,7 +26,7 @@ interface IState {
   loginReducer: ILoginState;
 }
 
-const ManageStock: React.FC = () => {
+const MyClubLanding: React.FC = () => {
   const id = useSelector((state: IState) => state.loginReducer.id);
   
   const dispatch = useDispatch();
@@ -55,4 +55,4 @@ const ManageStock: React.FC = () => {
   );
 };
 
-export default ManageStock;
+export default MyClubLanding;
