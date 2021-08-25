@@ -33,6 +33,7 @@ const Myclubs: React.FC = () => {
   const onCourtBooking = () => NavigationService.navigate('CourtBooking');
   const onNewCourtBooking = () => NavigationService.navigate('NewCourtBooking');
   const onStockManagement = () => NavigationService.navigate('StockManagement');
+  const onManageStock = () => NavigationService.navigate('ManageStock');
 
   const [visibles, setVisibles] = React.useState(false);
   const showDialog2 = () => setVisibles(true);
@@ -73,6 +74,9 @@ const Myclubs: React.FC = () => {
   </Button>
   <Button icon="camera" mode="contained" onPress={onStockManagement}>
   Stock Management
+  </Button>
+  <Button icon="camera" mode="contained" onPress={onManageStock}>
+  Manage Stock
   </Button>
 
     <Text style={styles.clubs}>My Clubs</Text>  

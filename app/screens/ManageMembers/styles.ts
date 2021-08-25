@@ -15,10 +15,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent'
   },
-  sidePadding:{
-    paddingHorizontal:20,
-    backgroundColor:'#fff',
-  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -112,55 +108,6 @@ borderTopWidth:1,
 borderBottomColor:"#ccc",
 marginTop:90,
     },
-    ShieldOrange:{marginTop:13,
-      backgroundColor:'#FF8500',
-      color:'#fff',
-     
-  },
-  borderClubs:{
-  borderColor: "#ddd",
-  borderWidth: 1,
-  marginTop:20,
-  borderRadius: 9,
-  padding:10,
-  },
-  borderscore:{
-      borderColor: "#ddd",
-      borderWidth: 1,
-      marginTop:20,
-      borderRadius: 9,
-      },
-  bgnumber:{
-      backgroundColor:'#E75333',
-      borderRadius:7,
-      marginRight:10,
-  },  
-  bgnumberblue:{
-      backgroundColor:'#000537',
-      borderRadius:7,
-      marginRight:10,
-  },
-  onlybg:{
-      backgroundColor:'#34C759',
-      width:"50%",
-      height:'20%',
-      borderRadius:50  
-  } ,
-  customWid:{
-      flex: 1, flexDirection: 'row',
-  backgroundColor:'#F6F6F6',
-  padding:20,
-  marginTop:20,
-  alignItems: "center",
-      justifyContent: "center",
-  } ,
-  fab: {
-    position: 'absolute',
-    margin: 0,
-    right: 0,
-    bottom: 0,
-    marginTop:40
-  },
  
 });
 

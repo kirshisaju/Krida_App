@@ -32,6 +32,10 @@ import ManageClub from 'app/screens/ManageClub';
 import CourtBooking from 'app/screens/CourtBooking';
 import NewCourtBooking from 'app/screens/NewCourtBooking';
 import StockManagement from 'app/screens/StockManagements';
+import ManageStock from 'app/screens/ManageStock';
+import NewExpense from 'app/screens/NewExpense';
+import SelectMembers from 'app/screens/SelectMembers';
+import ManageMembers from 'app/screens/ManageMembers';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -255,6 +259,34 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />
+        <Stack.Screen name="ManageStock" component={ManageStock} options={{
+                                                        title: 'ManageStock',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />                                               
+        <Stack.Screen name="NewExpense" component={NewExpense} options={{
+                                                        title: 'NewExpense',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} /> 
+        <Stack.Screen name="SelectMembers" component={SelectMembers} options={{
+                                                        title: 'SelectMembers',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} /> 
+         <Stack.Screen name="ManageMembers" component={ManageMembers} options={{
+                                                        title: 'ManageMembers',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />                                                                                                    
   </LoggedInStack.Navigator>
 );
 
