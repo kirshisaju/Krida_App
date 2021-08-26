@@ -247,6 +247,10 @@ marginTop:20,
 alignItems: "center",
     justifyContent: "center",
 } ,
+shawdbg:{
+  width:320,
+  marginRight:10
+}
 });
 
 export default styles;
