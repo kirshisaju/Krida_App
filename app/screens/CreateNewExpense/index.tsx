@@ -26,7 +26,7 @@ interface IState {
   loginReducer: ILoginState;
 }
 
-const NewExpense: React.FC = () => {
+const CreateNewExpense: React.FC = () => {
   const id = useSelector((state: IState) => state.loginReducer.id);
   
   const dispatch = useDispatch();
@@ -55,4 +55,4 @@ const NewExpense: React.FC = () => {
   );
 };
 
-export default NewExpense;
+export default CreateNewExpense;

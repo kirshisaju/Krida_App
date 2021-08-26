@@ -22,8 +22,9 @@ const NewCourtBooking: React.FC = () => {
   const dispatch = useDispatch();
   const [showDropDown, setShowDropDown] = React.useState(false);
   const onClubsetup = () => NavigationService.navigate('Clubsetup');
+  const onViewCourtBooking = () => NavigationService.navigate('ViewCourtBooking');
 
-
+  
   const [gender, setGender] = React.useState();
 
   const genderList = [
@@ -108,6 +109,7 @@ const NewCourtBooking: React.FC = () => {
       </View>
     </View>
     </View>
+    <Button mode="contained"  style = {styles.inputdone} onPress={onViewCourtBooking} > ViewCourtBooking</Button>
    </ScrollView>   
    
   );

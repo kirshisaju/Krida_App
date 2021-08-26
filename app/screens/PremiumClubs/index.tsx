@@ -37,13 +37,14 @@ const PremiumClubs: React.FC = () => {
   const onClubsetup = () => NavigationService.navigate('Clubsetup');
   const onSearchClub = () => NavigationService.navigate('SearchClub');
   const onCourtBooking = () => NavigationService.navigate('CourtBooking');
-  const onNewCourtBooking = () => NavigationService.navigate('NewCourtBooking');
+ 
   const onStockManagement = () => NavigationService.navigate('StockManagement');
   const onManageClub = () => NavigationService.navigate('ManageClub');
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
+  const onCreateNewExpense = () => NavigationService.navigate('CreateNewExpense');
  
-
+  
   const [gender, setGender] = React.useState();
 
   const genderList = [
@@ -58,6 +59,17 @@ const PremiumClubs: React.FC = () => {
   return (
 
  <ScrollView>
+     <Button icon="camera" mode="contained" onPress={onCourtBooking}>
+  Court Booking
+  </Button>
+  <Button icon="camera" mode="contained" onPress={onStockManagement}>
+  Manage Stock
+  </Button>
+  <Button 
+      icon="camera" mode="contained" onPress={onCreateNewExpense}>
+    CreateNewExpence
+  </Button>
+  
    <View style={styles.sidePadding}>
         
         <List.Item 
@@ -437,12 +449,7 @@ const PremiumClubs: React.FC = () => {
       icon="camera" mode="contained" onPress={onManageClub}>
     ManageClub
   </Button>
-  <Button icon="camera" mode="contained" onPress={onCourtBooking}>
-  Court Booking
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onNewCourtBooking}>
-  New Court Booking
-  </Button>
+
   <Button icon="camera" mode="contained" onPress={onStockManagement}>
   Stock Management
   </Button>
