@@ -98,7 +98,7 @@ const NewExpenses: React.FC = () => {
           right={props => <List.Icon {...props} icon="check-circle" style={{color:'#ccc'}} />}
         />
         <List.Item style={{borderBottomColor:'#ccc',borderBottomWidth:1,marginTop:10}}
-          left={props => <Text>3 Members Selected</Text> }
+          left={props => <Text style={{paddingTop:8,fontSize:12,color:'#000537'}}>3 Members Selected</Text> }
           right={props => <Button style={styles.bgdone}>Done</Button>}
         />
     </View>

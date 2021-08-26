@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     bgdone:{
       backgroundColor:'#CF3918',
-      },
+      borderRadius:20},
 });
 
 export default styles;
