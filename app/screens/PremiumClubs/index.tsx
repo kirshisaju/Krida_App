@@ -59,12 +59,8 @@ const PremiumClubs: React.FC = () => {
   return (
 
  <ScrollView>
-     <Button icon="camera" mode="contained" onPress={onCourtBooking}>
-  Court Booking
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onStockManagement}>
-  Manage Stock
-  </Button>
+
+
   <Button 
       icon="camera" mode="contained" onPress={onCreateNewExpense}>
     CreateNewExpence
@@ -183,18 +179,18 @@ const PremiumClubs: React.FC = () => {
       <View>
         <Title style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Club Management</Title>
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <Card style={styles.shawdmanage} >
+            <Card style={styles.shawdmanage} onPress={onCourtBooking} >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
               right={props =>  <Image source={require('../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
               <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', }}>
               <Image style={{paddingTop:0}} source={require('../../assets/Image13.png')}  />
-                <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Court</Text>
+                <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Courts</Text>
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Booking</Text>
               </View>
             </Card>
-            <Card style={styles.shawdmanage} >
+            <Card style={styles.shawdmanage}  onPress={onStockManagement} >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
