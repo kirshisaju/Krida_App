@@ -47,10 +47,9 @@ const ManageClub: React.FC = () => {
   
   const sheetRef = React.useRef(null);
   return (
-    <ScrollView>
-
-       
-   </ScrollView>   
+   <ScrollView>
+     
+   </ScrollView>
    
   );
 };
