@@ -222,10 +222,10 @@ shawd:{
   },
   shawdmanage:{
     width:120,  margin:10,padding:0,
-    shadowColor: '#000',
     shadowOffset: { width: 1, height: 1 },
-    shadowRadius: 15,  
-    elevation: 5
+    borderRadius: 5,  
+    borderColor:'#fcfcfc',
+    borderWidth:1
   },
   onlybg:{
     backgroundColor:'#34C759',
