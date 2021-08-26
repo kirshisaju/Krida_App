@@ -62,6 +62,25 @@ const styles = StyleSheet.create({
     shieldgreen:{
       backgroundColor:"#58B012", 
     },
+    inputaddnew:{
+      height: 45,
+      borderColor: '#CF3918',
+      borderWidth: 1,
+      width:"98%",
+      backgroundColor:'#fff',
+      color:'#CF3918',
+      paddingTop:4
+    },
+    
+    inputdone:{
+      height: 45,
+      borderColor: '#CF3918',
+      borderWidth: 1,
+      width:110,
+      backgroundColor:'#CF3918',
+      color:'white',
+      paddingTop:4
+    },
  
 });
 

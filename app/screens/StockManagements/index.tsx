@@ -44,6 +44,13 @@ const StockManagement: React.FC = () => {
 
   const [gender, setGender] = React.useState();
 
+  const genderList = [
+    { label: "Shuttlecock", value: "Shuttlecock" },
+
+    { label: "Female", value: "female" },
+
+    { label: "Others", value: "others" },
+  ];
   
   const sheetRef = React.useRef(null);
   return (
@@ -174,32 +181,49 @@ const StockManagement: React.FC = () => {
       <Portal>
         <Dialog visible={visible} onDismiss={hideDialog}>
            <List.Item
-                title="6.00 - 7.00 pm "
-                description="SpartSpark University Of East"
+                title="Stock Update"
+                description="Update #65"
                 left={props => <List.Icon {...props} icon="close"  />}
-                right={props => <List.Icon {...props} icon="share-google"  />}
               />
-        <Grid>
-            <Col size={25}><Text >user</Text></Col>
-            <Col size={50}><Switch /></Col>
-            <Col size={25}><List.Icon icon="share-google"/></Col>
-        </Grid>
-
-        <Card.Title  style={styles.cardtitle}
-            title="7-9 Tomarrow,23 April"
-            left={(props) => <List.Icon {...props} icon="calendar"/>}
-            />
-        <Card.Title  style={styles.cardtitle}
-            title="Spot Spark University Of East"
-            left={(props) => <List.Icon {...props} icon="angle-right"/>}
-            right={(props) => <List.Icon {...props} icon="chevron-right"/>}
-            />
-        <Card.Title  style={styles.cardtitle}
-            title="7-9 Tomarrow,23 April"
-            left={(props) => <List.Icon {...props} icon="calendar" />}
-            />
+              <View style={{paddingHorizontal:15}}>
+              <DropDown style = {styles.inputsfull}
+          label={"Category"}
+          mode={"outlined"}
+          value={gender}
+          setValue={setGender}
+          list={genderList}
+          visible={showDropDown}
+          showDropDown={() => setShowDropDown(true)}
+          onDismiss={() => setShowDropDown(false)}
+          inputProps={{
+            right: <TextInput.Icon name={"menu-down"} />,
+          }}
+        />
+        <List.Item   style={{marginTop:20}}
+            title=""
+            left={props => <Text style={{color:'#000537',fontSize:14}}>in Stock</Text> }
+            right={props => <Text style={{color:'#000537',fontSize:14,}}>23</Text>}
+        />
+       <List.Item   
+            title=""
+            left={props => <Text style={{color:'#000537',fontSize:14}}>Update Stock  Quantity</Text> }
+            right={props => <Text style={{color:'#000537',fontSize:14,}}>24</Text>}
+        />
+        <List.Item   style={{marginTop:20,backgroundColor:"#dcdcdc",borderRadius:7,paddingTop:20}}
+            left={props => <Text style={{color:'#000537',fontSize:14}}>Total Stock</Text> }
+            right={props => <Text style={{color:'#000537',fontSize:14,fontWeight:"bold"}}>47</Text>}
+        />
+        <View  style={{flex: 1, flexDirection: 'row', marginTop:20,marginBottom:40}}>
+          <View>
+            <Button style = {styles.inputaddnew}  > DONE & ADD NEW</Button>
+          </View>
+          <View>
+          <Button  onPress={hideDialog} style = {styles.inputdone}  > DONE</Button>
+          </View>
+        </View>  
+        </View> 
+        
         <Dialog.Actions>
-            <Button onPress={hideDialog}><Text>Done</Text></Button>
         </Dialog.Actions>
         </Dialog>
       </Portal>

@@ -71,21 +71,20 @@ const NewCourtBooking: React.FC = () => {
     Find Address
     </Button>
 </View>    
-
-    <View style={{marginTop:10}}> 
-    <DropDown style = {styles.inputsfull}
-          label={"Venue Address"}
-          mode={"outlined"}
-          value={gender}
-          setValue={setGender}
-          list={genderList}
-          visible={showDropDown}
-          showDropDown={() => setShowDropDown(true)}
-          onDismiss={() => setShowDropDown(false)}
-          inputProps={{
-            right: <TextInput.Icon name={"menu-down"} />,
-          }}
-        />
+        <View style={{marginTop:10}}> 
+        <DropDown style = {styles.inputsfull}
+            label={"Venue Address"}
+            mode={"outlined"}
+            value={gender}
+            setValue={setGender}
+            list={genderList}
+            visible={showDropDown}
+            showDropDown={() => setShowDropDown(true)}
+            onDismiss={() => setShowDropDown(false)}
+            inputProps={{
+              right: <TextInput.Icon name={"menu-down"} />,
+            }}
+          />
         </View> 
 <View style = {styles.heightselect} > 
 <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Admin's Message To The Group</Text>

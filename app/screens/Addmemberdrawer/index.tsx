@@ -104,17 +104,14 @@ const SecondRoute = () =><Text>dfghgfd</Text> ;
                autoCapitalize = "none"
               />
 </View> 
-<View  style={{flex: 1, flexDirection: 'row', marginTop:40}}>
-<View>
-<Button style = {styles.inputaddnew}  > DONE & ADD NEW</Button>
-</View>
-<View>
-<Button style = {styles.inputdone}  > DONE</Button>
-</View>
- 
- 
-</View> 
-
+    <View  style={{flex: 1, flexDirection: 'row', marginTop:40}}>
+      <View>
+        <Button style = {styles.inputaddnew}  > DONE & ADD NEW</Button>
+      </View>
+      <View>
+       <Button style = {styles.inputdone}  > DONE</Button>
+      </View>
+    </View> 
    </ScrollView>   
    
   );
