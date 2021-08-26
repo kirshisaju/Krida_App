@@ -8,6 +8,7 @@ import Clubdetail from "app/screens/Clubdetail";
 import ThemeController from "app/components/ThemeController";
 import NewClub from "app/screens/NewClub";
 import Clubsetup from "app/screens/Clubsetup";
+import PremiumClubs from "app/screens/PremiumClubs";
 
 const Stack = createStackNavigator();
 
@@ -60,5 +61,14 @@ const WalletStackNavigator = () => {
     </Stack.Navigator>
   );
 }
+const PremierClubNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="PremierClubs" component={PremiumClubs} />
 
-export { MainStackNavigator, WalletStackNavigator };
+    </Stack.Navigator>
+  );
+}
+
+
+export { MainStackNavigator, WalletStackNavigator,PremierClubNavigator };
