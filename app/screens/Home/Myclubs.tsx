@@ -65,7 +65,7 @@ const Myclubs: React.FC = () => {
     /> 
       <Button 
       icon="camera" mode="contained" onPress={onManageClub}>
-    Press me
+    ManageClub
   </Button>
   <Button icon="camera" mode="contained" onPress={onCourtBooking}>
   Court Booking
@@ -80,7 +80,7 @@ const Myclubs: React.FC = () => {
  My Club Landing
   </Button>
   <Button icon="camera" mode="contained" onPress={onNewExpenses}>
- New Expenses
+  Select Members for the expense
   </Button>
 
     <Text style={styles.clubs}>My Clubs</Text>  

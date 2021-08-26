@@ -181,6 +181,8 @@ const StockManagement: React.FC = () => {
       <Portal>
         <Dialog visible={visible} onDismiss={hideDialog}>
            <List.Item
+                titleStyle={{fontWeight:"700",fontSize:16}}
+                descriptionStyle={{fontWeight:"700",fontSize:14}}
                 title="Stock Update"
                 description="Update #65"
                 left={props => <List.Icon {...props} icon="close"  />}
@@ -209,7 +211,7 @@ const StockManagement: React.FC = () => {
             left={props => <Text style={{color:'#000537',fontSize:14}}>Update Stock  Quantity</Text> }
             right={props => <Text style={{color:'#000537',fontSize:14,}}>24</Text>}
         />
-        <List.Item   style={{marginTop:20,backgroundColor:"#dcdcdc",borderRadius:7,paddingTop:20}}
+        <List.Item   style={{marginTop:20,backgroundColor:"#dcdcdc",borderRadius:7,paddingTop:20,marginBottom:50}}
             left={props => <Text style={{color:'#000537',fontSize:14}}>Total Stock</Text> }
             right={props => <Text style={{color:'#000537',fontSize:14,fontWeight:"bold"}}>47</Text>}
         />

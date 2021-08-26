@@ -40,8 +40,9 @@ const styles = StyleSheet.create({
       right: 0,
       bottom: 0,
     },
-  
- 
+    bgdone:{
+      backgroundColor:'#CF3918',
+      },
 });
 
 export default styles;

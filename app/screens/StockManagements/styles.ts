@@ -81,6 +81,9 @@ const styles = StyleSheet.create({
       color:'white',
       paddingTop:4
     },
+    inputsfull:{
+      borderColor:'#ccc'
+    },
  
 });
 

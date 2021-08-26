@@ -290,7 +290,7 @@ const LoggedInNavigator = () => (
                                                         headerRight: () => <ThemeController />,
                                                         }} />  
         <Stack.Screen name="NewExpenses" component={NewExpenses} options={{
-                                                        title: 'NewExpenses',
+                                                        title: 'Select Members for the expense',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
