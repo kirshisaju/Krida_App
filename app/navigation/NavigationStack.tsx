@@ -38,6 +38,8 @@ import SelectMembers from 'app/screens/SelectMembers';
 import ManageMembers from 'app/screens/ManageMembers';
 import MyClubLanding from 'app/screens/MyClubLanding';
 import NewExpenses from 'app/screens/NewExpenses';
+import ViewCourtBooking from 'app/screens/ViewCourtBooking';
+import CreateNewExpense from 'app/screens/CreateNewExpense';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -268,8 +270,8 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />                                               
-        <Stack.Screen name="NewExpense" component={NewExpense} options={{
-                                                        title: 'NewExpense',
+        <Stack.Screen name="CreateNewExpense" component={CreateNewExpense} options={{
+                                                        title: 'CreateNewExpense',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
@@ -294,11 +296,18 @@ const LoggedInNavigator = () => (
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
-                                                        headerRight: () => <ThemeController />,
-                                                        }} />                                                                                                         
+                                                        headerRight: () => <ThemeController />,}} />        
+  
+       <Stack.Screen name="ViewCourtBooking" component={ViewCourtBooking} options={{
+                                                          title: 'ViewCourtBooking',
+                                                          headerTitleStyle: {
+                                                            fontWeight: 'bold',
+                                                          },
+                                                          headerRight: () => <ThemeController />,
+                                                                      }} />                                                                                                    
   </LoggedInStack.Navigator>
 );
-
+  
 const App: React.FC<IProps> = (props: IProps) => {
   const { theme } = props;
   const isLoggedIn = useSelector(
