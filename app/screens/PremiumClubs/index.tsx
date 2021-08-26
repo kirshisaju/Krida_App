@@ -145,7 +145,37 @@ const PremiumClubs: React.FC = () => {
        </View>
    </ScrollView>
       <Text style={{fontSize:14, fontWeight:'bold',marginVertical:20,}}>Club Stats</Text>
-      <Image style={{width:'100%',borderRadius:15}} source={require('../../assets/MembersCard.png')} />
+      <View>
+        <ScrollView
+         horizontal //scrolling left to right instead of top to bottom
+         showsHorizontalScrollIndicator={false} //hides native scrollbar
+         scrollEventThrottle={10} //how often we update the position of the indicator bar
+         pagingEnabled //scrolls from one image to the next, instead of allowing any value inbetween
+       >          
+        <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/MembersCard.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top3.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top2.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top1.png')} />
+           </Card>
+           </View>
+         <View>
+        </View>
+       </ScrollView>
+         </View>
       <View>
         <Title style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Club Management</Title>
           <View style={{flex: 1, flexDirection: 'row'}}>
@@ -199,7 +229,37 @@ const PremiumClubs: React.FC = () => {
       </View>
        <View>
          <Title style={{marginVertical:10, fontSize:14, fontWeight:'bold'}}>Club Sessions</Title>
-         <Image style={{width:'100%',borderRadius:15}} source={require('../../assets/Untitled-2.png')} />
+         <View>
+        <ScrollView
+         horizontal //scrolling left to right instead of top to bottom
+         showsHorizontalScrollIndicator={false} //hides native scrollbar
+         scrollEventThrottle={10} //how often we update the position of the indicator bar
+         pagingEnabled //scrolls from one image to the next, instead of allowing any value inbetween
+       >          
+        <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/Untitled-2.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl1.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl2.png')} />
+           </Card>
+           </View>
+           <View>
+           <Card style={styles.shawdbg}>
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl3.png')} />
+           </Card>
+           </View>
+         <View>
+        </View>
+       </ScrollView>
+         </View>
        </View>
        <Grid>
         <Col size={75} >
@@ -225,9 +285,9 @@ const PremiumClubs: React.FC = () => {
           <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
-        <DataTable.Cell><Avatar.Image size={30} source={require('../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
-        <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text style={styles.onlybg}> </Text></DataTable.Cell>
+        <DataTable.Cell  style={{width:'30%',padding:0,margin:0}}>
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
       </DataTable.Row>
       <DataTable.Row  style={{padding:0}}>
         <DataTable.Cell style={{width:'10%',padding:0,margin:0}}>2</DataTable.Cell>
@@ -236,9 +296,9 @@ const PremiumClubs: React.FC = () => {
           <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
-        <DataTable.Cell><Avatar.Image size={30} source={require('../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
-        <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text style={styles.onlybg}> </Text></DataTable.Cell>
+        <DataTable.Cell>
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
       </DataTable.Row>
       <DataTable.Row  style={{padding:0}}>
         <DataTable.Cell style={{width:'10%',padding:0,margin:0}}>3</DataTable.Cell>
@@ -247,9 +307,10 @@ const PremiumClubs: React.FC = () => {
           <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
-        <DataTable.Cell><Avatar.Image size={30} source={require('../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
-        <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text style={styles.onlybg}> </Text></DataTable.Cell>
+        <DataTable.Cell>
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} />
+        </DataTable.Cell>
       </DataTable.Row>
     </DataTable>
   </View>
@@ -343,43 +404,42 @@ const PremiumClubs: React.FC = () => {
       <Text style={{marginVertical:20, fontSize:14, fontWeight:'bold'}}>My Gallery</Text>
      </Col> 
      <Col size={50}>
-    <Text style={{fontSize:10, color:"#CF3918",justifyContent: 'center',alignSelf: 'center', alignItems:'center',marginLeft:4}}>
-      View more <List.Icon icon="chevron-right" /></Text>
+      <Text style={{fontSize:10, color:"#CF3918",marginTop:22,textAlign:'right'}}> View more </Text>
      </Col>
     </Grid>
-    <Grid>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
-      <Grid style={{marginTop:5}}>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
-      <Grid style={{marginTop:5,marginBottom:20}}>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
+    <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
+    <View style={{flex: 1, flexDirection: 'row',marginTop:7,}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
+    <View style={{flex: 1, flexDirection: 'row',marginTop:7,marginBottom:30}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
      </View> 
         <Button 
       icon="camera" mode="contained" onPress={onManageClub}>

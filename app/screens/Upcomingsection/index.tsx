@@ -88,7 +88,7 @@ const UpcomingSection: React.FC = () => {
     <Grid>
     <Col>
     
-    <Image size={100} source={require('../../assets/ScrollGroup.png')} />
+    <Image style={{width:'100%',borderRadius:10}} source={require('../../assets/ScrollGroup.png')} />
     </Col>
     </Grid>
     </View>
@@ -225,43 +225,42 @@ const UpcomingSection: React.FC = () => {
       <Text style={{marginVertical:20, fontSize:14, fontWeight:'bold'}}>My Gallery</Text>
      </Col> 
      <Col size={50}>
-    <Text style={{fontSize:10, color:"#CF3918",justifyContent: 'center',alignSelf: 'center', alignItems:'center',marginLeft:4}}>
-      View more <List.Icon icon="chevron-right" /></Text>
+       <Text style={{fontSize:10, color:"#CF3918",marginTop:22,textAlign:'right'}}> View more </Text>
      </Col>
     </Grid>
-    <Grid>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
-      <Grid style={{marginTop:5}}>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
-      <Grid style={{marginTop:5,marginBottom:20}}>
-    <Col size={40} style={{paddingRight:10}}>
-    <Image  source={require('../../assets/gl1.png')}/>
-      </Col>
-      <Col size={40} style={{paddingRight:10}}>
-    <Image source={require('../../assets/gl2.png')} style={{marginRight:10}}/>
-      </Col>
-      <Col size={40} >
-    <Image source={require('../../assets/gl3.png')} style={{marginRight:10}}/>
-      </Col>
-      </Grid>
+    <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
+    <View style={{flex: 1, flexDirection: 'row',marginTop:7,}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
+    <View style={{flex: 1, flexDirection: 'row',marginTop:7,marginBottom:30}}>
+        <View style={{width: "32%",marginRight:7,}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
+        </View>
+        <View style={{width: "32%",marginRight:7}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
+        </View>
+        <View style={{width: "32%",}}>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
+        </View>
+    </View>
 </>
   );
 };
