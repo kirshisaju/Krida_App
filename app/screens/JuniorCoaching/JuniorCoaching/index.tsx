@@ -43,7 +43,7 @@ const JuniorCoachingtHome: React.FC = () => {
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
   const onCreateNewExpense = () => NavigationService.navigate('CreateNewExpense');
-  const onJuniorTrainingschedule = () => NavigationService.navigate('JuniorTrainingschedule');
+ // const onJuniorCoachingSchedule = () => NavigationService.navigate('JuniorCoachingSchedule');
  
   
   const [gender, setGender] = React.useState();
@@ -175,7 +175,7 @@ const JuniorCoachingtHome: React.FC = () => {
       <View>
         <Title style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Club Management</Title>
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <Card style={styles.shawdmanage} onPress={onJuniorTrainingschedule} >
+            <Card style={styles.shawdmanage}  >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
