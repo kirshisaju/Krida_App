@@ -4,7 +4,7 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import App from "./NavigationStack";
-import {MainStackNavigator,PremierClubNavigator,WalletStackNavigator} from "./TabStack";
+import {JuniorCoachingNavigator, MainStackNavigator,PremierClubNavigator,WalletStackNavigator} from "./TabStack";
 import MyWallet from 'app/screens/MyWallet';
 import Chat from 'app/screens/Chat';
 import ThemeController from '../components/ThemeController';
@@ -41,6 +41,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen name="Home" component={App} options={{...homeOptions,title: 'Home'}} />
       <Tab.Screen name="Shop" component={App} options={{...homeOptions, title: 'Shop'}} />
       <Tab.Screen name="PremierClubs" component={PremierClubNavigator} options={{...homeOptions, title:'PremierClubs'}} />
+      <Tab.Screen name="JuniorCoaching" component={JuniorCoachingNavigator} options={{...homeOptions, title:'JuniorCoaching'}} />
       <Tab.Screen name="Wallet" component={WalletStackNavigator} options={{...homeOptions, title:'Wallet'}} />
       <Tab.Screen name="Chat" component={Chat} options={{...homeOptions, title:'Chat'}} />
     </Tab.Navigator>

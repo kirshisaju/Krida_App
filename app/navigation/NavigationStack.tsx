@@ -33,13 +33,16 @@ import CourtBooking from 'app/screens/CourtBooking';
 import NewCourtBooking from 'app/screens/NewCourtBooking';
 import StockManagement from 'app/screens/StockManagements';
 
-import NewExpense from 'app/screens/NewExpense';
+//import NewExpense from 'app/screens/NewExpense';
 import SelectMembers from 'app/screens/SelectMembers';
 import ManageMembers from 'app/screens/ManageMembers';
 import MyClubLanding from 'app/screens/MyClubLanding';
 import NewExpenses from 'app/screens/NewExpenses';
 import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
+import JuniorCoachingtHome from 'app/screens/JuniorCoaching/JuniorCoaching';
+import JuniorCoachingTrainingschedule from 'app/screens/JuniorCoaching/JuniorCoachingTrainingschedule';
+
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -304,10 +307,25 @@ const LoggedInNavigator = () => (
                                                             fontWeight: 'bold',
                                                           },
                                                           headerRight: () => <ThemeController />,
-                                                                      }} />                                                                                                    
+                                                        }} />   
+      <Stack.Screen name="JuniorCoachingtHome" component={JuniorCoachingtHome} options={{
+                                                          title: 'JuniorCoachingtHome',
+                                                          headerTitleStyle: {
+                                                            fontWeight: 'bold',
+                                                          },
+                                                          headerRight: () => <ThemeController />,
+                                                        }} />    
+            <Stack.Screen name="JuniorTrainingschedule" component={JuniorCoachingTrainingschedule} options={{
+                                                          title: 'JuniorTrainingschedule',
+                                                          headerTitleStyle: {
+                                                            fontWeight: 'bold',
+                                                          },
+                                                          headerRight: () => <ThemeController />,
+                                                        }} />                                                      
+                                                                                                                                                        
   </LoggedInStack.Navigator>
 );
-  
+
 const App: React.FC<IProps> = (props: IProps) => {
   const { theme } = props;
   const isLoggedIn = useSelector(
