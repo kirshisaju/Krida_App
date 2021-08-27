@@ -10,6 +10,7 @@ import NewClub from "app/screens/NewClub";
 import Clubsetup from "app/screens/Clubsetup";
 import PremiumClubs from "app/screens/PremiumClubs";
 import JuniorCoaching from "app/screens/JuniorCoaching/JuniorCoaching";
+import TrainingScheduleJunior from "app/screens/TrainingScheduleJunior";
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,14 @@ const MainStackNavigator = () => {
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />  
+         <Stack.Screen name="TrainingScheduleJunior" component={TrainingScheduleJunior} options={{
+                                                        title: 'TrainingScheduleJunior',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />  
+
 
 
                           

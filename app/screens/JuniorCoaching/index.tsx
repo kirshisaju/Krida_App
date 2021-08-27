@@ -11,8 +11,8 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
 import DropDown from 'react-native-paper-dropdown';
 //import SelectDropdown from 'react-native-select-dropdown'
 import Swiper from 'react-native-swiper';
-import Colorsetup from '../../Colorsetup';
-import Logosetup from '../../Logosetup';
+import Colorsetup from '../Colorsetup';
+import Logosetup from '../Logosetup';
 import Icon from 'react-native-paper/lib/typescript/components/Icon';
 import BottomSheet from 'reanimated-bottom-sheet';
 import MemberShipDrawer from 'app/screens/membershipdrawer';
@@ -42,7 +42,7 @@ const JuniorCoachingtHome: React.FC = () => {
   const onManageClub = () => NavigationService.navigate('ManageClub');
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
-  const onCreateNewExpense = () => NavigationService.navigate('CreateNewExpense');
+  const onTrainingScheduleJunior = () => NavigationService.navigate('TrainingScheduleJunior');
  // const onJuniorCoachingSchedule = () => NavigationService.navigate('JuniorCoachingSchedule');
  
   
@@ -81,7 +81,7 @@ const JuniorCoachingtHome: React.FC = () => {
        >
           <View>
            <Card style={styles.shawd} >
-           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../../assets/stock-photo.png')} />
+           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../assets/stock-photo.png')} />
            <Text style={{fontSize:17, fontWeight:'bold',color:'#000537', marginTop:20,paddingLeft:12}}>Ahsoka Tano</Text>
            <View style={{flex: 1, flexDirection: 'row',paddingBottom:10}}>
              <View style={{width: 130, }}>
@@ -101,7 +101,7 @@ const JuniorCoachingtHome: React.FC = () => {
            </View>
        <View>
        <Card style={styles.shawd} >
-           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../../assets/stock-photo.png')} />
+           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../assets/stock-photo.png')} />
            <Text style={{fontSize:17, fontWeight:'bold',color:'#000537', marginTop:20,paddingLeft:12}}>Ahsoka Tano</Text>
            <View style={{flex: 1, flexDirection: 'row',paddingBottom:10}}>
              <View style={{width: 130, }}>
@@ -121,7 +121,7 @@ const JuniorCoachingtHome: React.FC = () => {
        </View>
        <View>
        <Card style={styles.shawd} >
-           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../../assets/stock-photo.png')} />
+           <Image style={{width:'100%',borderTopLeftRadius:8,borderTopRightRadius:8}} source={require('../../assets/stock-photo.png')} />
            <Text style={{fontSize:17, fontWeight:'bold',color:'#000537', marginTop:20,paddingLeft:12}}>Ahsoka Tano</Text>
            <View style={{flex: 1, flexDirection: 'row',paddingBottom:10}}>
              <View style={{width: 130, }}>
@@ -150,22 +150,22 @@ const JuniorCoachingtHome: React.FC = () => {
        >          
         <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/MembersCard.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/MembersCard.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/top3.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top3.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/top2.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top2.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/top1.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/top1.png')} />
            </Card>
            </View>
          <View>
@@ -175,24 +175,24 @@ const JuniorCoachingtHome: React.FC = () => {
       <View>
         <Title style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Club Management</Title>
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <Card style={styles.shawdmanage}  >
+            <Card style={styles.shawdmanage} onPress={onTrainingScheduleJunior} >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
-              right={props =>  <Image source={require('../../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
+              right={props =>  <Image source={require('../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
               <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', }}>
-              <Image style={{paddingTop:0}} source={require('../../../assets/Image13.png')}  />
+              <Image style={{paddingTop:0}} source={require('../../assets/Image13.png')}  />
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Courts</Text>
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Booking</Text>
               </View>
             </Card>
-            <Card style={styles.shawdmanage}  onPress={onStockManagement} >
+            <Card style={styles.shawdmanage}   >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
-              right={props =>  <Image source={require('../../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
+              right={props =>  <Image source={require('../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
               <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', }}>
-              <Image style={{paddingTop:0}} source={require('../../../assets/checklist.png')}  />
+              <Image style={{paddingTop:0}} source={require('../../assets/checklist.png')}  />
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Manage</Text>
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Stock</Text>
               </View>
@@ -203,9 +203,9 @@ const JuniorCoachingtHome: React.FC = () => {
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
-              right={props =>  <Image source={require('../../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
+              right={props =>  <Image source={require('../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
               <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', }}>
-              <Image style={{paddingTop:0}} source={require('../../../assets/manage_accounts.png')}  />
+              <Image style={{paddingTop:0}} source={require('../../assets/manage_accounts.png')}  />
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Manage</Text>
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Members</Text>
               </View>
@@ -214,9 +214,9 @@ const JuniorCoachingtHome: React.FC = () => {
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
-              right={props =>  <Image source={require('../../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
+              right={props =>  <Image source={require('../../assets/Iconright.png')} style={{marginBottom:0}} />}/>
               <View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center', }}>
-              <Image style={{paddingTop:0}} source={require('../../../assets/Image14.png')}  />
+              <Image style={{paddingTop:0}} source={require('../../assets/Image14.png')}  />
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:5,color:'#CF3918'}}>Manage</Text>
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Expenses</Text>
               </View>
@@ -234,22 +234,22 @@ const JuniorCoachingtHome: React.FC = () => {
        >          
         <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/Untitled-2.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/Untitled-2.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/sl1.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl1.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/sl2.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl2.png')} />
            </Card>
            </View>
            <View>
            <Card style={styles.shawdbg}>
-           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../../assets/sl3.png')} />
+           <Image style={{width:'100%',borderRadius:15,height:200}} source={require('../../assets/sl3.png')} />
            </Card>
            </View>
          <View>
@@ -277,35 +277,35 @@ const JuniorCoachingtHome: React.FC = () => {
       <DataTable.Row  style={{padding:0}}>
         <DataTable.Cell style={{width:'10%',padding:0,margin:0}}>1</DataTable.Cell>
         <DataTable.Cell  style={{width:'30%',padding:0,margin:0}}>
-          <Avatar.Image size={20} source={require('../../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../../assets/2.png')} /></DataTable.Cell>
+          <Avatar.Image size={20} source={require('../../assets/1.png')} />
+          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
         <DataTable.Cell  style={{width:'30%',padding:0,margin:0}}>
-          <Avatar.Image source={require('../../../assets/1.png')} style={{width:'100%'}} />
-          <Avatar.Image source={require('../../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
       </DataTable.Row>
       <DataTable.Row  style={{padding:0}}>
         <DataTable.Cell style={{width:'10%',padding:0,margin:0}}>2</DataTable.Cell>
         <DataTable.Cell  style={{width:'30%',padding:0,margin:0}}>
-          <Avatar.Image size={20} source={require('../../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../../assets/2.png')} /></DataTable.Cell>
+          <Avatar.Image size={20} source={require('../../assets/1.png')} />
+          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
         <DataTable.Cell>
-          <Avatar.Image source={require('../../../assets/1.png')} style={{width:'100%'}} />
-          <Avatar.Image source={require('../../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} /></DataTable.Cell>
       </DataTable.Row>
       <DataTable.Row  style={{padding:0}}>
         <DataTable.Cell style={{width:'10%',padding:0,margin:0}}>3</DataTable.Cell>
         <DataTable.Cell  style={{width:'30%',padding:0,margin:0}}>
-          <Avatar.Image size={20} source={require('../../../assets/1.png')} />
-          <Avatar.Image size={20} source={require('../../../assets/2.png')} /></DataTable.Cell>
+          <Avatar.Image size={20} source={require('../../assets/1.png')} />
+          <Avatar.Image size={20} source={require('../../assets/2.png')} /></DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text> </DataTable.Cell>
         <DataTable.Cell  style={{width:'10%',padding:0,margin:0}}><Text>21</Text></DataTable.Cell>
         <DataTable.Cell>
-          <Avatar.Image source={require('../../../assets/1.png')} style={{width:'100%'}} />
-          <Avatar.Image source={require('../../../assets/2.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/1.png')} style={{width:'100%'}} />
+          <Avatar.Image source={require('../../assets/2.png')} style={{width:'100%'}} />
         </DataTable.Cell>
       </DataTable.Row>
     </DataTable>
@@ -325,11 +325,11 @@ const JuniorCoachingtHome: React.FC = () => {
     <Col size={40} >
     <Grid>
     <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath1.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Steve</Text>
       </Col>
       <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath3.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Mike</Text>
       </Col>
       </Grid>
@@ -340,18 +340,18 @@ const JuniorCoachingtHome: React.FC = () => {
      <Col size={40} >
      <Grid>
     <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath1.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Mike</Text>
       </Col>
       <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath3.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Steve</Text>
       </Col>
       </Grid>
      </Col> 
     </Grid>
     <View style={styles.customWid}>
-        <View><Image  source={require('../../../assets/trophy.png')}  style={{ marginTop:5,marginRight:10}}/></View>
+        <View><Image  source={require('../../assets/trophy.png')}  style={{ marginTop:5,marginRight:10}}/></View>
         <View><Text style={{color:'#000537',fontSize:20,fontWeight:'bold'}}>21</Text></View>
         <View><Text style={{color:'#000537',fontSize:12,opacity:.5,paddingHorizontal:20,paddingTop:5}}>Score</Text></View>
         <View><Text style={{color:'#000537',fontSize:20,fontWeight:'bold'}}>18</Text></View>
@@ -363,11 +363,11 @@ const JuniorCoachingtHome: React.FC = () => {
     <Col size={40} >
     <Grid>
     <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath1.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Steve</Text>
       </Col>
       <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath3.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Mike</Text>
       </Col>
       </Grid>
@@ -378,18 +378,18 @@ const JuniorCoachingtHome: React.FC = () => {
      <Col size={40} >
      <Grid>
     <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath1.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Mike</Text>
       </Col>
       <Col size={50} >
-    <Avatar.Image size={50} source={require('../../../assets/NoPath3.png')} />
+    <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
     <Text style={{color:'#000537',fontSize:12,paddingLeft:10,paddingTop:10}}>Steve</Text>
       </Col>
       </Grid>
      </Col> 
     </Grid>
     <View style={styles.customWid}>
-        <View><Image  source={require('../../../assets/trophy.png')}  style={{ marginTop:5,marginRight:10}}/></View>
+        <View><Image  source={require('../../assets/trophy.png')}  style={{ marginTop:5,marginRight:10}}/></View>
         <View><Text style={{color:'#000537',fontSize:20,fontWeight:'bold'}}>21</Text></View>
         <View><Text style={{color:'#000537',fontSize:12,opacity:.5,paddingHorizontal:20,paddingTop:5}}>Score</Text></View>
         <View><Text style={{color:'#000537',fontSize:20,fontWeight:'bold'}}>18</Text></View>
@@ -405,35 +405,35 @@ const JuniorCoachingtHome: React.FC = () => {
     </Grid>
     <View style={{flex: 1, flexDirection: 'row'}}>
         <View style={{width: "32%",marginRight:7,}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl1.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
         </View>
         <View style={{width: "32%",marginRight:7}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl2.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
         </View>
         <View style={{width: "32%",}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl3.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
         </View>
     </View>
     <View style={{flex: 1, flexDirection: 'row',marginTop:7,}}>
         <View style={{width: "32%",marginRight:7,}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl1.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
         </View>
         <View style={{width: "32%",marginRight:7}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl2.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
         </View>
         <View style={{width: "32%",}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl3.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
         </View>
     </View>
     <View style={{flex: 1, flexDirection: 'row',marginTop:7,marginBottom:30}}>
         <View style={{width: "32%",marginRight:7,}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl1.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl1.png')}/>
         </View>
         <View style={{width: "32%",marginRight:7}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl2.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl2.png')}/>
         </View>
         <View style={{width: "32%",}}>
-          <Image style={{width:'100%',borderRadius:5}} source={require('../../../assets/gl3.png')}/>
+          <Image style={{width:'100%',borderRadius:5}} source={require('../../assets/gl3.png')}/>
         </View>
     </View>
      </View> 

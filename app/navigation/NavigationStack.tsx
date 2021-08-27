@@ -40,10 +40,11 @@ import MyClubLanding from 'app/screens/MyClubLanding';
 import NewExpenses from 'app/screens/NewExpenses';
 import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
-import JuniorCoachingtHome from 'app/screens/JuniorCoaching/JuniorCoaching';
-import JuniorCoachingTrainingschedule from 'app/screens/JuniorCoaching/JuniorCoachingTrainingschedule';
-import JuniorCoachingTrainingSchedule from 'app/screens/JuniorCoaching/JuniorCoachingTrainingschedule';
-import JuniorCoachingSchedule from 'app/screens/JuniorCoaching/JuniorTrainingSchedule';
+import TrainingScheduleJunior from 'app/screens/TrainingScheduleJunior';
+import JuniorCoachingtHome from 'app/screens/JuniorCoaching';
+
+
+
 
 
 const Stack = createStackNavigator();
@@ -317,7 +318,13 @@ const LoggedInNavigator = () => (
                                                           },
                                                           headerRight: () => <ThemeController />,
                                                         }} />    
-                                                                                                                                                                                              
+       <Stack.Screen name="TrainingScheduleJunior" component={TrainingScheduleJunior} options={{
+                                                        title: 'TrainingScheduleJunior',
+                                                        headerTitleStyle: {
+                                                          fontWeight: 'bold',
+                                                        },
+                                                        headerRight: () => <ThemeController />,
+                                                        }} />                                                                                                                                
   </LoggedInStack.Navigator>
 );
 
