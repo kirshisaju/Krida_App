@@ -84,6 +84,23 @@ const styles = StyleSheet.create({
     inputsfull:{
       borderColor:'#ccc'
     },
+    shadows:{
+      marginTop:20,
+      padding:10,
+      borderRadius: 10,
+      borderColor: '#ddd',
+      borderWidth: 1,
+    },
+    tooglecustom:{
+      position:'absolute',
+      top:-5,
+      left:60
+    },
+    tooglecustomright:{
+      position:'absolute',
+      top:5,
+      right:-50
+    },
  
 });
 

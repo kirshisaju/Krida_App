@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   sidePadding:{
     paddingHorizontal:20,
-    backgroundColor:'#fff',
+    backgroundColor:'#fff',   
   },
   container: {
     flex: 1,
