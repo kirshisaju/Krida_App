@@ -59,8 +59,6 @@ const PremiumClubs: React.FC = () => {
   return (
 
  <ScrollView>
-
-
   <Button 
       icon="camera" mode="contained" onPress={onCreateNewExpense}>
     CreateNewExpence
