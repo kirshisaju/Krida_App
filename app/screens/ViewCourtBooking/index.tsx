@@ -395,7 +395,6 @@ const ViewCourtBooking: React.FC = () => {
               right: <TextInput.Icon name={"menu-down"} />,
             }}
           />
-          <List.Icon style = {styles.backicon} icon="calendar" />
         </View>
         <Text style={{color:'#000537',fontSize:12,marginTop:20,padding:0}}>Expense Against</Text>
         <Text style={{color:'#CF3918',fontSize:14,marginTop:5,padding:0}}>Add Members</Text>
