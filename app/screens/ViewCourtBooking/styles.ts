@@ -82,7 +82,14 @@ const styles = StyleSheet.create({
       paddingTop:4
     },
     inputsfull:{
-      borderColor:'#ccc'
+      borderColor:'#ccc',
+      padding:0,
+      backgroundColor:'#fff',
+    },
+    inputexpen:{
+      borderColor:'#ccc',
+      padding:0,
+      backgroundColor:'#fff',
     },
     shadows:{
       marginTop:20,
@@ -90,6 +97,12 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       borderColor: '#ddd',
       borderWidth: 1,
+    },
+    backicon:{
+      position:'absolute',
+      marginLeft:280,
+      marginTop:15
+   
     },
     tooglecustom:{
       position:'absolute',
@@ -100,6 +113,17 @@ const styles = StyleSheet.create({
       position:'absolute',
       top:5,
       right:-50
+    },
+    fab: {
+      backgroundColor:"#EC7961",
+      color:"#fff",
+      position: 'absolute',
+      margin: 0,
+      right: 10,
+      bottom:0,
+      width:50,
+      height:50,
+      padding:5
     },
  
 });

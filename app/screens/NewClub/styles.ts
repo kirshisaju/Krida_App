@@ -41,6 +41,7 @@ borderEndColor:'black',
   borderBottomWidth: 1,
   backgroundColor:"#fff"
 },
+
  inputWrap: {
   borderColor: '#cccccc',
   borderBottomWidth: 1,
@@ -90,7 +91,28 @@ inputpho: {
 },
 heightselect:{
   paddingTop:7
-}
+},
+inputaddnew:{
+  margin: 3,
+  height: 45,
+  borderColor: '#CF3918',
+  borderWidth: 1,
+  width:171,
+  backgroundColor:'#fff',
+  color:'#CF3918',
+  paddingTop:4
+},
+
+inputdone:{
+  margin: 3,
+  height: 45,
+  borderColor: '#CF3918',
+  borderWidth: 1,
+  width:140,
+  backgroundColor:'#CF3918',
+  color:'white',
+  paddingTop:4
+},
  
 });
 
