@@ -64,7 +64,7 @@ inputaddnew:{
   height: 45,
   borderColor: '#CF3918',
   borderWidth: 1,
-  width:171,
+  width:500,
   backgroundColor:'#fff',
   color:'#CF3918',
   paddingTop:4

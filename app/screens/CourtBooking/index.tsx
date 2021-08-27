@@ -145,13 +145,11 @@ const renderLabel = ({route, focused}) =>
      </Col>
 </Grid> 
 </View>
+  <View style={{paddingVertical:30,marginBottom:20}}>
+    <FAB style={styles.fab}  small icon="plus" onPress={onNewCourtBooking} />
+  </View>
 </ScrollView>
-<FAB
-    style={styles.fab}
-    small
-    icon="plus"
-    onPress={onNewCourtBooking}
-  />
+  
     </View>
 
    
