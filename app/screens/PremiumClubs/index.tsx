@@ -43,6 +43,7 @@ const PremiumClubs: React.FC = () => {
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
   const onCreateNewExpense = () => NavigationService.navigate('CreateNewExpense');
+  const onJuniorCoachingHome = () => NavigationService.navigate('JuniorCoachingHome');
  
   
   const [gender, setGender] = React.useState();
@@ -62,6 +63,10 @@ const PremiumClubs: React.FC = () => {
   <Button 
       icon="camera" mode="contained" onPress={onCreateNewExpense}>
     CreateNewExpence
+  </Button>
+  <Button 
+      icon="camera" mode="contained" onPress={onJuniorCoachingHome}>
+    Junior Club
   </Button>
   
    <View style={styles.sidePadding}>

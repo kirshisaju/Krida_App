@@ -41,7 +41,8 @@ import NewExpenses from 'app/screens/NewExpenses';
 import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
 import TrainingScheduleJunior from 'app/screens/TrainingScheduleJunior';
-import JuniorCoachingtHome from 'app/screens/JuniorCoaching';
+import JuniorCoachingtHome from 'app/screens/JuniorCoachingHome';
+
 
 
 

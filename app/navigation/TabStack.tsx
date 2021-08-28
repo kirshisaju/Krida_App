@@ -48,13 +48,7 @@ const MainStackNavigator = () => {
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />  
-         <Stack.Screen name="TrainingScheduleJunior" component={TrainingScheduleJunior} options={{
-                                                        title: 'TrainingScheduleJunior',
-                                                        headerTitleStyle: {
-                                                          fontWeight: 'bold',
-                                                        },
-                                                        headerRight: () => <ThemeController />,
-                                                        }} />  
+
 
 
 
@@ -79,14 +73,7 @@ const PremierClubNavigator = () => {
     </Stack.Navigator>
   );
 }
-const JuniorCoachingNavigator = () => {
-  return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="JuniorCoaching" component={JuniorCoaching} />
-
-    </Stack.Navigator>
-  );
-}
 
 
-export { MainStackNavigator, WalletStackNavigator,PremierClubNavigator,JuniorCoachingNavigator };
+
+export { MainStackNavigator, WalletStackNavigator,PremierClubNavigator, };
