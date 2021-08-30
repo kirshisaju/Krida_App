@@ -32,7 +32,6 @@ import ManageClub from 'app/screens/ManageClub';
 import CourtBooking from 'app/screens/CourtBooking';
 import NewCourtBooking from 'app/screens/NewCourtBooking';
 import StockManagement from 'app/screens/StockManagements';
-
 //import NewExpense from 'app/screens/NewExpense';
 import SelectMembers from 'app/screens/SelectMembers';
 import ManageMembers from 'app/screens/ManageMembers';
@@ -41,10 +40,8 @@ import NewExpenses from 'app/screens/NewExpenses';
 import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
 import TrainingScheduleJunior from 'app/screens/TrainingScheduleJunior';
-import JuniorCoachingtHome from 'app/screens/JuniorCoachingHome';
-
-
-
+import JuniorCoachingtHome from 'app/screens/JuniorCoachingHomes';
+import CreateNewJuniorCoacing from 'app/screens/CreateNewJuniorCoacing';
 
 
 
@@ -133,6 +130,42 @@ const AuthNavigator = () => {
            <Stack.Screen
         name="AddTopup"
         component={AddTopup}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+                 <Stack.Screen
+        name="CreateNewJuniorCoacing"
+        component={CreateNewJuniorCoacing}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+                      <Stack.Screen
+        name="JuniorCoachingtHome"
+        component={JuniorCoachingtHome}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+                      <Stack.Screen
+        name="TrainingScheduleJunior"
+        component={TrainingScheduleJunior}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+                            <Stack.Screen
+        name="ManageClub"
+        component={ManageClub}
         options={{
           // When logging out, a pop animation feel    fault 'push' animation
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
@@ -313,7 +346,7 @@ const LoggedInNavigator = () => (
                                                           headerRight: () => <ThemeController />,
                                                         }} />   
       <Stack.Screen name="JuniorCoachingtHome" component={JuniorCoachingtHome} options={{
-                                                          title: 'JuniorCoachingtHome',
+                                                          title: 'JuniorCoachingHome',
                                                           headerTitleStyle: {
                                                             fontWeight: 'bold',
                                                           },
@@ -325,7 +358,8 @@ const LoggedInNavigator = () => (
                                                           fontWeight: 'bold',
                                                         },
                                                         headerRight: () => <ThemeController />,
-                                                        }} />                                                                                                                                
+                                                        }} />     
+                                                                                                                          
   </LoggedInStack.Navigator>
 );
 

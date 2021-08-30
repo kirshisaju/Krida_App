@@ -81,71 +81,7 @@ const ManageClub: React.FC = () => {
   const sheetRef = React.useRef(null);
   return (
    <ScrollView style={{backgroundColor:'#fff'}}>
-      <List.Item 
-        titleStyle={{fontSize:17, fontWeight:'bold'}}
-        descriptionStyle={{fontSize:14, fontWeight:'bold'}}
-        title="Premier Club"
-        description="Norwich, UK"
-        left={props =>  <List.Icon {...props} icon="chevron-left" />}/>
-        <>
-      <TabView
-        swipeEnabled={false}
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        onIndexChange={setIndex}
-        tabStyle={{width:'auto'}}
-        renderTabBar={ (props:any) => (
-      <TabBar
-        renderLabel={renderLabel}
-        {...props}
-        indicatorStyle={{ backgroundColor: '#E75333', height: 2 }}
-        tabStyle={{ width: 108 }}
-        scrollEnabled={true}
-        style={{ backgroundColor: 'white' }}/>
-        )}/>
-        </>
-      <View style={{paddingHorizontal:15,marginTop:10}}>
-        <View style={{flex: 1, flexDirection: 'row',marginTop:20}}>
-          <View style={{width: '85%', }}>
-            <Text style={{color:'#000537',fontSize:14,fontWeight:'700',margin:0,paddingTop:5}}>Schedule</Text>
-            <Paragraph style={{fontSize:14,margin:0}}>Wednesdays, 06:00PM - 07:00PM</Paragraph>
-          </View>
-          <View style={{width: '15%', }}>
-          <Avatar.Icon size={40} icon="pencil" style={{color:"#fff",backgroundColor:"#E75333"}} />
-          </View>
-        </View>
-        <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Members</Text>
-        <View style={{flex: 1, flexDirection: 'row',marginTop:15}}>
-          <View style={{width:"20%", }}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath2.png')} />
-            <Text style={{paddingLeft:10,fontSize:10,color:"#000537",paddingTop:10}}>Ashoka</Text>
-          </View>
-          <View style={{width:"20%", }}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
-            <Text style={{fontSize:10,color:"#000537",paddingTop:10}}>Carasynthia</Text>
-          </View>
-          <View style={{width:"20%", }}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
-            <Text style={{paddingLeft:15,fontSize:10,color:"#000537",paddingTop:10}}>Moff</Text>
-          </View>
-          <View style={{width:"20%",}}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath4.png')} />
-            <Text style={{paddingLeft:10,fontSize:10,color:"#000537",paddingTop:10}}>Ashoka</Text>
-          </View>
-        </View>
-        <Text style={{fontSize:14, fontWeight:'bold',marginTop:15,marginBottom:15}}>Calendar View</Text>
-        <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Assign coaches</Text>
-        <View style={{flex: 1, flexDirection: 'row',marginTop:15,marginBottom:15}}>
-          <View style={{width:"50%", }}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath2.png')} />
-            <Text style={{paddingLeft:10,fontSize:10,color:"#000537",paddingTop:10}}>Horold</Text>
-          </View>
-          <View style={{width:'50%'}}>
-            <FAB style={styles.fab}  small icon="plus"  />
-            <Text style={{fontSize:12,color:"#000537",paddingTop:10,position:'absolute',right:10,top:50,marginBottom:10}}>New Group</Text>
-          </View>
-        </View>
-      </View>
+ 
       <List.Item 
         titleStyle={{fontSize:17, fontWeight:'bold'}}
         descriptionStyle={{fontSize:14, fontWeight:'bold'}}
