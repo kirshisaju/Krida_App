@@ -10,6 +10,8 @@ import styles from './styles';
 import BottomSheet from 'reanimated-bottom-sheet';
 import JuniorCoachingAddMember from '../JuniorCoachingAddMember';
 import JuniorCoachingAddCoaches from '../JuniorCoachingAddCoaches';
+import JuniorCoachingAddSchedule from '../JuniorCoachingAdd Schedule';
+import { Modal, Portal, Provider } from 'react-native-paper';
 
 
 
@@ -43,6 +45,18 @@ const renderContent1 = () => (
 <JuniorCoachingAddCoaches/>
 </View>
 );
+const renderContent2 = () => ( 
+  <View
+  style={{
+    backgroundColor: 'white',
+    padding: 16,
+    height: 1000,
+    width:"100%",
+  }}
+>
+<JuniorCoachingAddSchedule/>
+</View>
+);
 const JuniorCoachingNewGroup: React.FC = () => {
   const id = useSelector((state: IState) => state.loginReducer.id);
   
@@ -65,12 +79,13 @@ const JuniorCoachingNewGroup: React.FC = () => {
 
   const sheetRef = React.useRef(null);
   const sheetRef1 = React.useRef(null);
+  const sheetRef2 = React.useRef(null);
   return (
     <ScrollView>
       <List.Item 
         titleStyle={{fontSize:17, fontWeight:'bold'}}
         descriptionStyle={{fontSize:14, fontWeight:'bold'}}
-        title="Session for 12, Jul 2021"
+        title="Sessions for 12, Jul 2021"
         left={props =>  <List.Icon {...props} icon="chevron-left" />}/>
       <View style={{paddingHorizontal:15,paddingBottom:20}}>
       <View style = {{marginBottom:10,marginTop:20}} > 
@@ -98,7 +113,7 @@ const JuniorCoachingNewGroup: React.FC = () => {
             <List.Icon color={Colors.red900} style={{paddingLeft:0,margin:0,}} icon="plus-circle-outline"  />
           </View>
           <View style={{width:"89%", }}> 
-            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}>Add Schedule</Text>
+            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}  onPress={() => sheetRef2.current.snapTo(0)} >Add Schedule</Text>
           </View>
         </View>
         <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Members</Text>
@@ -169,6 +184,18 @@ const JuniorCoachingNewGroup: React.FC = () => {
   
               
             />
+                          
+      <BottomSheet
+              ref={sheetRef2}
+              snapPoints={[450, 300, 0]}
+              borderRadius={10}
+              initialSnap={2}
+              renderContent={renderContent2}
+              
+  
+              
+            />
+
    </ScrollView>   
    
   );

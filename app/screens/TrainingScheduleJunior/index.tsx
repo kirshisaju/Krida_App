@@ -44,7 +44,7 @@ const TrainingScheduleJunior: React.FC = () => {
   const onManageClub = () => NavigationService.navigate('ManageClub');
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
-  //const onManageClub = () => NavigationService.navigate('CreateNewExpense');
+  const onJuniorClubMemberAndSchedule = () => NavigationService.navigate('JuniorClubMemberAndSchedule');
  // const onJuniorCoachingSchedule = () => NavigationService.navigate('JuniorCoachingSchedule');
  
  const FirstRoute = () => (
@@ -161,20 +161,17 @@ const renderLabel = ({route, focused}) =>
             <FAB style={styles.fab}  small icon="plus"   onPress={() => sheetRef.current.snapTo(0)} />
             <Text style={{fontSize:12,color:"#000537",paddingTop:10,position:'absolute',right:10,top:50,marginBottom:10}}>New Group</Text>
           </View> 
+          
       </View> 
-      <Button icon="camera" mode="contained" onPress={onManageClub} >
-    Press me
-  </Button>
-    
+      <Button icon="camera" mode="contained" onPress={onJuniorClubMemberAndSchedule} >
+   Junior Club Member And Search
+  </Button> 
       <BottomSheet
               ref={sheetRef}
               snapPoints={[450, 300, 0]}
               borderRadius={10}
               initialSnap={2}
               renderContent={renderContent}
-              
-  
-              
             />
   </ScrollView>
 

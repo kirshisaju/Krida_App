@@ -28,7 +28,7 @@ import Applesignup from 'app/screens/Login/applesignup';
 import Clubdetail from 'app/screens/Clubdetail';
 import NewClub from 'app/screens/NewClub';
 import SearchClub from 'app/screens/Searchclub';
-import ManageClub from 'app/screens/ManageClub';
+//import ManageClub from 'app/screens/ManageClub';
 import CourtBooking from 'app/screens/CourtBooking';
 import NewCourtBooking from 'app/screens/NewCourtBooking';
 import StockManagement from 'app/screens/StockManagements';
@@ -41,6 +41,8 @@ import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
 import TrainingScheduleJunior from 'app/screens/TrainingScheduleJunior';
 import JuniorCoachingtHome from 'app/screens/JuniorCoachingHomes';
+import JuniorClubMemberAndSchedule from 'app/screens/JuniorClubMemberAndSchedule';
+import JuniorCoachingLesson from 'app/screens/JuniorCoachingLesson';
 //import CreateNewJuniorCoacing from 'app/screens/CreateNewJuniorCoacing';
 
 
@@ -163,15 +165,26 @@ const AuthNavigator = () => {
           headerRight: () => <ThemeController />,
         }}
       />
-                            <Stack.Screen
-        name="ManageClub"
-        component={ManageClub}
+ <Stack.Screen
+        name="JuniorCoachingLesson"
+        component={JuniorCoachingLesson}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      /> 
+
+     <Stack.Screen
+        name="JuniorClubMemberAndSchedule"
+        component={JuniorClubMemberAndSchedule}
         options={{
           // When logging out, a pop animation feel    fault 'push' animation
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
           headerRight: () => <ThemeController />,
         }}
       />
+      
        
     </AuthStack.Navigator>
   );
@@ -275,8 +288,8 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />
-   <Stack.Screen name="ManageClub" component={ManageClub} options={{
-                                                        title: 'ManageClub',
+   <Stack.Screen name="JuniorClubMemberAndSchedule" component={JuniorClubMemberAndSchedule} options={{
+                                                        title: 'JuniorClubMemberAndSchedule',
                                                         headerTitleStyle: {
                                                           fontWeight: 'bold',
                                                         },
