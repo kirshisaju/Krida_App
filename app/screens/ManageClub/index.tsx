@@ -213,11 +213,11 @@ const ManageClub: React.FC = () => {
         <View style={{borderColor:'#ccc',borderWidth:1,borderRadius:8,marginTop:15}}>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
             <View style={{width:"15%", }}> 
-              <List.Icon color={Colors.grey800} icon="clock" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginBottom:0}} />
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{paddingLeft:12,fontSize:16,color:"#000537",paddingTop:15,}}>Warm Up Exercise</Text>
+              <Text style={{paddingLeft:12,fontSize:16,color:"#000537",paddingTop:5,}}>Warm Up Exercise</Text>
             </View>
             <View style={{width:"10%", }}> 
             <List.Icon color={Colors.green800} icon="check-circle" />
@@ -225,11 +225,11 @@ const ManageClub: React.FC = () => {
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
             <View style={{width:"15%", }}> 
-              <List.Icon color={Colors.grey800} icon="clock" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginBottom:0}} />
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{fontSize:16,color:"#000537",paddingTop:15,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
               <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
             </View>
             <View style={{width:"10%", }}> 
@@ -238,11 +238,11 @@ const ManageClub: React.FC = () => {
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
             <View style={{width:"15%", }}> 
-              <List.Icon color={Colors.grey800} icon="clock" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginBottom:0}} />
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{fontSize:16,color:"#000537",paddingTop:15,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
               <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
             </View>
             <View style={{width:"10%", }}> 
@@ -251,11 +251,11 @@ const ManageClub: React.FC = () => {
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',padding:5}}>
             <View style={{width:"15%", }}> 
-              <List.Icon color={Colors.grey800} icon="clock" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginBottom:0}} />
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{fontSize:16,color:"#000537",paddingTop:15,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
               <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
             </View>
             <View style={{width:"10%", }}> 
@@ -620,20 +620,83 @@ const ManageClub: React.FC = () => {
           autoCapitalize = "none"
           >
         </TextInput>
+        <List.Icon  icon="clock-outline"  color={Colors.black} style={{position:'absolute',right:0,top:5}}/>
         </View>
         <View style={{width:"48%", marginLeft:10}}> 
-        <TextInput 
-          mode='outlined'  
-          label= "To"
-          underlineColorAndroid = "transparent"
-          placeholder = "07:00 PM"
-          placeholderTextColor = "black"
-          autoCapitalize = "none"
-          >
-        </TextInput>
-        <List.Icon  icon="check-circle"  color={Colors.green800} />
+          <TextInput 
+            mode='outlined'  
+            label= "To"
+            underlineColorAndroid = "transparent"
+            placeholder = "07:00 PM"
+            placeholderTextColor = "black"
+            autoCapitalize = "none"
+            >
+          </TextInput>
+          <List.Icon  icon="clock-outline"  color={Colors.black} style={{position:'absolute',right:0,top:5}}/>
         </View>
       </View>
+      <Text style={{fontSize:14, fontWeight:'bold',marginTop:20}}>Lesson Plan</Text>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+          <View style={{width:"11%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingTop:0,margin:0,}} icon="plus-circle-outline"  />
+          </View>
+          <View style={{width:"80%", }}> 
+            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}>Add Lesson</Text>
+          </View>
+        </View>
+        <View style={{borderColor:'#ccc',borderWidth:1,borderRadius:8,marginTop:15}}>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:0,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"15%", }}> 
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
+              <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
+            </View>
+            <View style={{width:"70%", }}> 
+              <Text style={{paddingLeft:12,fontSize:16,color:"#000537",paddingTop:15,}}>Warm Up Exercise</Text>
+            </View>
+            <View style={{width:"10%", }}> 
+            <List.Icon color={Colors.green800} icon="check-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:0,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"15%", }}> 
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingTop:0,marginVertical:0}} />
+              <Text style={{fontSize:12,color:"#000537",marginTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
+            </View>
+            <View style={{width:"70%", }}> 
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
+            </View>
+            <View style={{width:"10%", }}> 
+            <List.Icon color={Colors.grey500} icon="check-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:0,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"15%", }}> 
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
+              <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
+            </View>
+            <View style={{width:"70%", }}> 
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
+            </View>
+            <View style={{width:"10%", }}> 
+            <List.Icon color={Colors.grey500} icon="check-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',padding:5}}>
+            <View style={{width:"15%", }}> 
+              <List.Icon color={Colors.grey800} icon="clock-outline" style={{alignContent:'center',alignSelf:'center',alignItems:'center',paddingBottom:0,marginVertical:0}} />
+              <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
+            </View>
+            <View style={{width:"70%", }}> 
+              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
+              <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
+            </View>
+            <View style={{width:"10%", }}> 
+            <List.Icon color={Colors.grey500} icon="check-circle" />
+            </View>
+          </View>
+        </View>
     </View>    
    </ScrollView>
    
