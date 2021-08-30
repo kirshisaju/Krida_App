@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ScrollView, Switch, TouchableOpacity, View } from 'react-native';
-import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip, Card, Badge, Paragraph, FAB,Colors, DataTable  } from 'react-native-paper';
+import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip, Card, Badge, Paragraph, FAB,Colors, DataTable, Searchbar  } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
 
 import * as loginActions from 'app/store/actions/loginActions';
@@ -28,7 +28,8 @@ interface IState {
 
 const ManageClub: React.FC = () => {
   const id = useSelector((state: IState) => state.loginReducer.id);
-  
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const onChangeSearch = (query: React.SetStateAction<string>) => setSearchQuery(query);
   const dispatch = useDispatch();
   const [visible1, setVisible1] = React.useState(false);
   const showDialog1 = () => setVisible1(true);
@@ -351,29 +352,289 @@ const ManageClub: React.FC = () => {
               <View><Text style={{color:'#000537',fontSize:20,fontWeight:'bold'}}>18</Text></View>
           </View>
         </View>
-        <View>
-        <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+        <Text style={{fontSize:14, fontWeight:'bold',marginTop:20}}>Training feedback</Text>
+        <View style={{borderColor:'#ccc',borderWidth:1,borderRadius:8,marginTop:15,}}>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:15,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,paddingBottom:10}}>
+            <View style={{width:"25%", }}> 
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>Student</Text>
+            </View>
+            <View style={{width:"15%",}}> 
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>L1</Text>
+            </View>
             <View style={{width:"15%", }}> 
-            <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>L2</Text>
             </View>
-            <View style={{width:"10%", }}> 
-              <Text style={{width:30,height:30,borderRadius:50,backgroundColor:'#34C759'}}></Text>
+            <View style={{width:"15%" }}> 
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>L3</Text>
             </View>
-            <View style={{width:"10%", }}> 
-              <Text style={{width:30,height:30,borderRadius:50,backgroundColor:'#34C759'}}></Text>
+            <View style={{width:"15%",}}> 
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>L4</Text>
             </View>
-            <View style={{width:"10%", }}> 
-              <Text style={{width:30,height:30,borderRadius:50,backgroundColor:'#34C759'}}></Text>
-            </View>
-            <View style={{width:"10%", }}> 
-              <Text style={{width:30,height:30,borderRadius:50,backgroundColor:'#34C759'}}></Text>
-            </View>
-            <View style={{width:"10%", }}> 
-            <List.Icon color={Colors.red900} icon="plus-circle" />
+            <View style={{width:"15%", }}> 
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>F/B</Text>
             </View>
           </View>
-  </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"25%",}}> 
+            <Avatar.Image size={40} source={require('../../assets/NoPath3.png')} />
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>Steve</Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 ,}}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginLeft:0 }}> 
+            <List.Icon color={Colors.red900} style={{marginLeft:0 }} icon="plus-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"25%",}}> 
+            <Avatar.Image size={40} source={require('../../assets/NoPath3.png')} />
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>Steve</Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 ,}}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginLeft:0 }}> 
+            <List.Icon color={Colors.red900} style={{marginLeft:0 }} icon="plus-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
+            <View style={{width:"25%",}}> 
+            <Avatar.Image size={40} source={require('../../assets/NoPath3.png')} />
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>Steve</Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 ,}}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginLeft:0 }}> 
+            <List.Icon color={Colors.red900} style={{marginLeft:0 }} icon="plus-circle" />
+            </View>
+          </View>
+          <View style={{flex: 1, flexDirection: 'row',marginTop:0,padding:5,paddingBottom:5}}>
+            <View style={{width:"25%",}}> 
+            <Avatar.Image size={40} source={require('../../assets/NoPath3.png')} />
+            <Text style={{color:'#000537',fontSize:12,paddingLeft:5}}>Steve</Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 }}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginTop:15 ,}}> 
+              <Text style={{width:22,height:22,borderRadius:50,backgroundColor:'#34C759',textAlign:'center'}}></Text>
+            </View>
+            <View style={{width:"15%",marginLeft:0 }}> 
+            <List.Icon color={Colors.red900} style={{marginLeft:0 }} icon="plus-circle" />
+            </View>
+          </View>
+        </View>
+        <Button color={Colors.white}  style={{backgroundColor:'#CF3918',marginVertical:20,}}>Done</Button>
       </View>
+
+
+      <List.Item 
+        titleStyle={{fontSize:17, fontWeight:'bold'}}
+        descriptionStyle={{fontSize:14, fontWeight:'bold'}}
+        title="Session for 12, Jul 2021"
+        left={props =>  <List.Icon {...props} icon="chevron-left" />}/>
+      <View style={{paddingHorizontal:15,paddingBottom:20}}>
+      <View style = {{marginBottom:10,marginTop:20}} > 
+        <TextInput 
+          mode='outlined'  
+          label= "Group Name"
+          underlineColorAndroid = "transparent"
+          placeholder = "Enter Group Name"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+      </View>
+        <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Schedule</Text>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+          <View style={{width:"70%", }}> 
+          <Text style={{fontSize:14,paddingTop:13}}>Wednesdays, 06:00PM - 07:00PM</Text>
+          </View>
+          <View style={{width:"10%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingLeft:0,margin:0,}} icon="minus-circle-outline"  />
+          </View>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+          <View style={{width:"11%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingLeft:0,margin:0,}} icon="plus-circle-outline"  />
+          </View>
+          <View style={{width:"89%", }}> 
+            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}>Add Schedule</Text>
+          </View>
+        </View>
+        <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Members</Text>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:15}}>
+          <View style={{width:"20%", }}> 
+            <Avatar.Image size={50} source={require('../../assets/NoPath2.png')} />
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:0,right:10}} />
+            <Text style={{paddingLeft:10,fontSize:10,color:"#000537",paddingTop:10}}>Ashoka</Text>
+          </View>
+          <View style={{width:"20%", }}> 
+            <Avatar.Image size={50} source={require('../../assets/NoPath1.png')} />
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:0,right:10}} />
+            <Text style={{fontSize:10,color:"#000537",paddingTop:10}}>Carasynthia</Text>
+          </View>
+          <View style={{width:"20%", }}> 
+            <Avatar.Image size={50} source={require('../../assets/NoPath3.png')} />
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:0,right:10}} />
+            <Text style={{paddingLeft:18,fontSize:10,color:"#000537",paddingTop:10}}>Moff</Text>
+          </View>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+          <View style={{width:"11%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingLeft:0,margin:0,}} icon="plus-circle-outline"  />
+          </View>
+          <View style={{width:"89%", }}> 
+            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}>Add Members</Text>
+          </View>
+        </View>
+        <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Select the days</Text>
+        <Text style={{fontSize:14, fontWeight:'bold',marginTop:20}}>Assign coaches</Text>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:15}}>
+          <View style={{width:"20%", }}> 
+            <Avatar.Image size={50} source={require('../../assets/NoPath5.png')} />
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:0,right:10}} />
+            <Text style={{paddingLeft:10,fontSize:10,color:"#000537",paddingTop:10}}>Harold</Text>
+          </View>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+          <View style={{width:"11%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingLeft:0,margin:0,}} icon="plus-circle-outline"  />
+          </View>
+          <View style={{width:"89%", }}> 
+            <Text style={{fontSize:10,color:"#CF3918",paddingTop:13}}>Add Coaches</Text>
+          </View>
+        </View>
+        <Button color={Colors.white}  style={{backgroundColor:'#CF3918',marginVertical:20,}}>Done</Button>
+      </View>
+
+
+      <List.Item 
+        titleStyle={{fontSize:17, fontWeight:'bold'}}
+        descriptionStyle={{fontSize:14, fontWeight:'bold'}}
+        title="Add Members"
+        left={props =>  <List.Icon {...props} icon="close" />}/>
+      <View>
+        <View style={{paddingHorizontal:15}}>
+            <Searchbar style={{marginBottom:10,elevation: 0, borderBottomColor:'#ddd', borderBottomWidth:2,width:"100%"}}
+              placeholder="Search"
+              onChangeText={onChangeSearch}
+              value={searchQuery}
+            />
+        <List.Item style={{borderBottomColor:'#ccc',borderBottomWidth:1,marginTop:10}}
+          titleStyle={{fontSize:14,fontWeight:"700",color:'#000537'}}
+          descriptionStyle={{fontSize:12,color:'#000537'}}
+          title="Ahsoka Tano"
+          description="@caras"
+          left={props => <Avatar.Image size={45} source={require('../../assets/NoPath1.png')} /> }
+          right={props => <List.Icon {...props} icon="check-circle"  />}
+        />
+        <List.Item style={{borderBottomColor:'#ccc',borderBottomWidth:1,marginTop:10}}
+          titleStyle={{fontSize:14,fontWeight:"700",color:'#000537'}}
+          descriptionStyle={{fontSize:12,color:'#000537'}}
+          title="Ahsoka Tano"
+          description="@caras"
+          left={props => <Avatar.Image size={45} source={require('../../assets/NoPath3.png')} /> }
+          right={props => <List.Icon {...props} icon="check-circle"  />}
+        />
+        <List.Item style={{borderBottomColor:'#ccc',borderBottomWidth:1,marginTop:10}}
+          titleStyle={{fontSize:14,fontWeight:"700",color:'#000537'}}
+          descriptionStyle={{fontSize:12,color:'#000537'}}
+          title="Ahsoka Tano"
+          description="@caras"
+          left={props => <Avatar.Image size={45} source={require('../../assets/NoPath2.png')} /> }
+          right={props => <List.Icon {...props} icon="check-circle"  color={Colors.green800}/>}
+        />
+        <List.Item style={{borderBottomColor:'#ccc',borderBottomWidth:1,marginTop:10}}
+          titleStyle={{fontSize:14,fontWeight:"700",color:'#000537'}}
+          descriptionStyle={{fontSize:12,color:'#000537'}}
+          title="Ahsoka Tano"
+          description="@caras"
+          left={props => <Avatar.Image size={45} source={require('../../assets/NoPath5.png')} /> }
+          right={props => <List.Icon {...props} icon="check-circle"  color={Colors.green800}/>}
+        />
+        <List.Item style={{marginTop:10}}
+          titleStyle={{fontSize:14,fontWeight:"700",color:'#000537'}}
+          descriptionStyle={{fontSize:12,color:'#000537'}}
+          title="Ahsoka Tano"
+          description="@caras"
+          left={props => <Avatar.Image size={45} source={require('../../assets/NoPath1.png')} /> }
+          right={props => <List.Icon {...props} icon="check-circle"  color={Colors.green800} />}
+        />
+      </View>
+      <List.Item style={{borderTopColor:'#ccc',borderTopWidth:2,marginVertical:15}}
+          left={props => <Text style={{paddingTop:10,fontSize:12,color:'#000537'}}>3 Members Selected</Text> }
+          right={props => <Button color={Colors.white}  style={{backgroundColor:'#CF3918',borderRadius:20}}>Done</Button>}
+        />
+    </View>
+
+    <List.Item 
+        titleStyle={{fontSize:17, fontWeight:'bold'}}
+        descriptionStyle={{fontSize:14, fontWeight:'bold'}}
+        title="Add a plan for 12 Jul 2021 "
+        left={props =>  <List.Icon {...props} icon="chevron-left" />}/>
+    <View style={{paddingHorizontal:15}}>
+      <View style={{flex: 1, flexDirection: 'row',marginTop:5}}>
+        <View style={{width:"48%", }}> 
+        <TextInput 
+          mode='outlined'  
+          label= "From"
+          underlineColorAndroid = "transparent"
+          placeholder = "06:00 PM"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+        </View>
+        <View style={{width:"48%", marginLeft:10}}> 
+        <TextInput 
+          mode='outlined'  
+          label= "To"
+          underlineColorAndroid = "transparent"
+          placeholder = "07:00 PM"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+        <List.Icon  icon="check-circle"  color={Colors.green800} />
+        </View>
+      </View>
+    </View>    
    </ScrollView>
    
   );
