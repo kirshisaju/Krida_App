@@ -33,6 +33,24 @@ borderscore:{
     marginTop:20,
     borderRadius: 9,
 },
+search:{
+    marginTop:0,
+    elevation: 0,
+    borderBottomColor:'#ddd',
+    borderBottomWidth:2,
+    },
+fabs: {
+    position: 'absolute',
+    margin: 10,
+    right: 0,
+    bottom: -230,
+    borderRadius:50,
+    width:60,
+    height:60,
+    color:"#fff",
+    padding:10,
+    backgroundColor:"#E75A1A",
+    },
 });
 
 export default styles;

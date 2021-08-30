@@ -41,7 +41,7 @@ import ViewCourtBooking from 'app/screens/ViewCourtBooking';
 import CreateNewExpense from 'app/screens/CreateNewExpense';
 import TrainingScheduleJunior from 'app/screens/TrainingScheduleJunior';
 import JuniorCoachingtHome from 'app/screens/JuniorCoachingHomes';
-import CreateNewJuniorCoacing from 'app/screens/CreateNewJuniorCoacing';
+//import CreateNewJuniorCoacing from 'app/screens/CreateNewJuniorCoacing';
 
 
 
@@ -136,7 +136,7 @@ const AuthNavigator = () => {
           headerRight: () => <ThemeController />,
         }}
       />
-                 <Stack.Screen
+             {/*    <Stack.Screen
         name="CreateNewJuniorCoacing"
         component={CreateNewJuniorCoacing}
         options={{
@@ -144,7 +144,7 @@ const AuthNavigator = () => {
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
           headerRight: () => <ThemeController />,
         }}
-      />
+      /> */}
                       <Stack.Screen
         name="JuniorCoachingtHome"
         component={JuniorCoachingtHome}
