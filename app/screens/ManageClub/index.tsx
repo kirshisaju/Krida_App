@@ -41,6 +41,16 @@ const ManageClub: React.FC = () => {
   const hideDialog2= () => setVisible2(false);
   const [isEnabled, setIsEnabled] = React.useState(false);
   const [isEnabled1, setIsEnabled1] = React.useState(false);
+
+  const [gender, setGender] = React.useState();
+
+  const genderList = [
+    { label: "Wednesdays", value: "Wednesdays" },
+
+    { label: "Female", value: "female" },
+
+    { label: "Others", value: "others" },
+  ];
   const FirstRoute = () => (
     <ScrollView>
 
@@ -68,7 +78,7 @@ const ManageClub: React.FC = () => {
     fourth : FourthRoute,
   });
   const [index, setIndex] = React.useState(0);
-  const [gender, setGender] = React.useState();
+
   const [routes] = React.useState([
     { key: 'first', title: 'Group 1'},
     { key: 'second', title: 'Group 2'},
@@ -532,7 +542,7 @@ const ManageClub: React.FC = () => {
               <Text style={{paddingLeft:12,fontSize:16,color:"#000537",paddingTop:15,}}>Warm Up Exercise</Text>
             </View>
             <View style={{width:"10%", }}> 
-            <List.Icon color={Colors.green800} icon="check-circle" />
+            <List.Icon color={Colors.red900} icon="minus-circle-outline" />
             </View>
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:0,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
@@ -545,7 +555,7 @@ const ManageClub: React.FC = () => {
               <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
             </View>
             <View style={{width:"10%", }}> 
-            <List.Icon color={Colors.grey500} icon="check-circle" />
+            <List.Icon color={Colors.red900} icon="minus-circle-outline" />
             </View>
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:0,borderBottomColor:'#ccc',borderBottomWidth:1,padding:5}}>
@@ -554,11 +564,10 @@ const ManageClub: React.FC = () => {
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
-              <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
+              <Text style={{fontSize:16,color:"#000537",paddingTop:15,}}>Matches</Text>
             </View>
             <View style={{width:"10%", }}> 
-            <List.Icon color={Colors.grey500} icon="check-circle" />
+            <List.Icon color={Colors.red900} icon="minus-circle-outline" />
             </View>
           </View>
           <View style={{flex: 1, flexDirection: 'row',marginTop:0,marginBottom:10,borderBottomColor:'#ccc',padding:5}}>
@@ -567,11 +576,10 @@ const ManageClub: React.FC = () => {
               <Text style={{fontSize:12,color:"#000537",paddingTop:0,textAlign:'center',opacity:.5}}>10 min</Text>
             </View>
             <View style={{width:"70%", }}> 
-              <Text style={{fontSize:16,color:"#000537",paddingTop:5,}}>Lesson: Back hand clear stroke</Text>
-              <Text style={{fontSize:16,color:"#000537",}}>Category: Service</Text>
+              <Text style={{fontSize:16,color:"#000537",paddingTop:15,}}>Cool down with games</Text>
             </View>
             <View style={{width:"10%", }}> 
-            <List.Icon color={Colors.grey500} icon="check-circle" />
+            <List.Icon color={Colors.red900} icon="minus-circle-outline" />
             </View>
           </View>
         </View>
@@ -582,10 +590,180 @@ const ManageClub: React.FC = () => {
    
 
     <List.Item 
-        titleStyle={{fontSize:17, fontWeight:'bold'}}
-        descriptionStyle={{fontSize:14, fontWeight:'bold'}}
-        title="Add Schedule"
-        right={props =>  <List.Icon {...props} icon="close" />}/>
+        title=""
+        right={props =>  <List.Icon color={Colors.black} icon="close" />}  />
+    <View style={{paddingHorizontal:15,paddingBottom:20}}>
+    <Text style={{fontSize:14, fontWeight:'bold',marginTop:0}}>Add Schedule</Text>
+    <View style={{marginTop:15}}> 
+        <DropDown 
+            label={"Days"}
+            mode={"outlined"}
+            value={gender}
+            setValue={setGender}
+            list={genderList}
+            visible={showDropDown}
+            showDropDown={() => setShowDropDown(true)}
+            onDismiss={() => setShowDropDown(false)}
+            inputProps={{
+              right: <TextInput.Icon name={"menu-down"} />,
+            }}
+          />
+        </View> 
+    <View style={{flex: 1, flexDirection: 'row',marginTop:15}}>
+        <View style={{width:"48%", }}> 
+        <TextInput 
+          mode='outlined'  
+          label= "From"
+          underlineColorAndroid = "transparent"
+          placeholder = "06:00 PM"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+        <List.Icon  icon="clock-outline"  color={Colors.black} style={{position:'absolute',right:0,top:5}}/>
+        </View>
+        <View style={{width:"48%", marginLeft:15}}> 
+          <TextInput 
+            mode='outlined'  
+            label= "To"
+            underlineColorAndroid = "transparent"
+            placeholder = "07:00 PM"
+            placeholderTextColor = "black"
+            autoCapitalize = "none"
+            >
+          </TextInput>
+          <List.Icon  icon="clock-outline"  color={Colors.black} style={{position:'absolute',right:0,top:5}}/>
+        </View>
+      </View>
+      <Button color={Colors.white}  style={{backgroundColor:'#CF3918',marginVertical:25,}}>Done</Button>
+    </View>
+    <List.Item 
+        title=""
+        right={props =>  <List.Icon color={Colors.black} icon="close" />}  />
+    <View style={{paddingHorizontal:15,paddingBottom:20}}>
+        <View style={{flex: 1, flexDirection: 'row',marginTop:0}}>
+          <View style={{width:"55%", }}> 
+            <Text style={{fontSize:14,color:"#000537",paddingTop:10,fontWeight:"bold"}}>Add Lesson</Text>
+          </View>
+          <View style={{width:"5%", }}> 
+            <List.Icon color={Colors.red900} style={{paddingTop:0,margin:0,textAlign:'right'}} icon="plus-circle-outline"  />
+          </View>
+          <View style={{width:"38%", }}> 
+            <Text style={{fontSize:12,color:"#CF3918",paddingTop:13,textAlign:'right'}}>Create New Lesson</Text>
+          </View>
+          
+        </View>
+    <View style={{marginTop:15}}> 
+        <DropDown 
+            label={"General"}
+            mode={"outlined"}
+            value={gender}
+            setValue={setGender}
+            list={genderList}
+            visible={showDropDown}
+            showDropDown={() => setShowDropDown(true)}
+            onDismiss={() => setShowDropDown(false)}
+            inputProps={{
+              right: <TextInput.Icon name={"menu-down"} />,
+            }}
+          />
+    </View> 
+    <View style={{marginTop:15}}> 
+      <DropDown 
+        label={"Warm up and Exercise"}
+        mode={"outlined"}
+        value={gender}
+        setValue={setGender}
+        list={genderList}
+        visible={showDropDown}
+        showDropDown={() => setShowDropDown(true)}
+        onDismiss={() => setShowDropDown(false)}
+        inputProps={{
+          right: <TextInput.Icon name={"menu-down"} />,
+        }}
+      />
+    </View> 
+    <View style={{marginTop:15}}> 
+      <DropDown 
+        label={"15 min"}
+        mode={"outlined"}
+        value={gender}
+        setValue={setGender}
+        list={genderList}
+        visible={showDropDown}
+        showDropDown={() => setShowDropDown(true)}
+        onDismiss={() => setShowDropDown(false)}
+        inputProps={{
+          right: <TextInput.Icon name={"menu-down"} />,
+        }}
+      />
+    </View> 
+      <Button color={Colors.white}  style={{backgroundColor:'#CF3918',marginVertical:25,}}>Done</Button>
+    </View>
+
+    <List.Item 
+        titleStyle={{fontSize:18,color:"#000537",fontWeight:'bold'}}
+        title="Create Lesson"
+        left={props =>  <List.Icon color={Colors.black} icon="close" />}  />
+    <View style={{paddingHorizontal:15,paddingBottom:20}}>
+      <View style={{marginTop:15}}> 
+        <DropDown 
+          label={"Select category"}
+          mode={"outlined"}
+          value={gender}
+          setValue={setGender}
+          list={genderList}
+          visible={showDropDown}
+          showDropDown={() => setShowDropDown(true)}
+          onDismiss={() => setShowDropDown(false)}
+          inputProps={{
+            right: <TextInput.Icon name={"menu-down"} />,
+          }}
+        />
+      </View>
+      <View style={{marginTop:15}}>
+        <TextInput
+          mode='outlined'  
+          label= "Lesson Name"
+          underlineColorAndroid = "transparent"
+          placeholder = "Enter a lesson name"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+      </View> 
+      <View style={{marginTop:15}}>
+        <TextInput style={{height:100,paddingTop:0,marginTop:0}}
+          mode='outlined'  
+          label= "Description"
+          underlineColorAndroid = "transparent"
+          placeholder = "Enter a lesson description"
+          placeholderTextColor = "black"
+          autoCapitalize = "none"
+          >
+        </TextInput>
+      </View> 
+      <View style={{marginTop:15}}>
+        <Text style={{borderStyle:"dashed",borderWidth:1,borderColor:'#ccc',textAlign:'center',paddingVertical:40,fontSize:14,fontWeight:'bold'}}>
+          <Image source={require('../../assets/image-gallery.png')} style={{marginHorizontal:10}}/>
+        Add Photo & Video Library</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'row',marginVertical:20}}>
+          <View style={{width:"33%", }}> 
+            <Image source={require('../../assets/Image6.png')} style={{width:'90%'}}/>
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:-5,right:4}} />
+          </View>
+          <View style={{width:"33%", }}> 
+            <Image source={require('../../assets/Image6.png')} style={{width:'90%'}}/>
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:-5,right:4}} />
+          </View>
+          <View style={{width:"33%", }}> 
+            <Image source={require('../../assets/Image9.png')} style={{width:'100%'}} />
+            <Image source={require('../../assets/TrailingIcon.png')} style={{position:'absolute',top:-5,right:-10,}} />
+          </View>
+        </View>
+        <Button color={Colors.white}  style={{backgroundColor:'#CF3918',marginVertical:25,}}>Done</Button>
+    </View>
    </ScrollView>
    
   );
