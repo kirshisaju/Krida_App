@@ -126,7 +126,7 @@ const renderLabel = ({route, focused}) =>
             <Paragraph style={{fontSize:14,margin:0}}>Wednesdays, 06:00PM - 07:00PM</Paragraph>
           </View>
           <View style={{width: '15%', }}>
-          <Avatar.Icon size={40} icon="pencil" style={{color:"#fff",backgroundColor:"#E75333"}} />
+          <Avatar.Icon size={40} icon="pencil" style={{color:"#fff",backgroundColor:"#E75333"}}  />
           </View>
         </View>
         <Text style={{fontSize:14, fontWeight:'bold',marginTop:10}}>Members</Text>
@@ -162,7 +162,10 @@ const renderLabel = ({route, focused}) =>
             <Text style={{fontSize:12,color:"#000537",paddingTop:10,position:'absolute',right:10,top:50,marginBottom:10}}>New Group</Text>
           </View> 
       </View> 
-   
+      <Button icon="camera" mode="contained" onPress={onManageClub} >
+    Press me
+  </Button>
+    
       <BottomSheet
               ref={sheetRef}
               snapPoints={[450, 300, 0]}
