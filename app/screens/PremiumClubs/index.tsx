@@ -320,11 +320,10 @@ const PremiumClubs: React.FC = () => {
   </View>
      </View>
      <Grid>
-      <Col size={75} >
+      <Col size={75}>
         <Text style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Matches</Text>
       </Col> 
-      <Col size={25} >
-      
+      <Col size={25}>
       </Col>
     </Grid>
     <View style={styles.borderscore}>

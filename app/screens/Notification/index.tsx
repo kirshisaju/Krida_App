@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, View } from 'react-native';
-import { Text, Button, List, Avatar, Title, Dialog, TextInput } from 'react-native-paper';
+import { Text, Button, List, Avatar, Title, Dialog, TextInput, Paragraph } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
 
 import * as loginActions from 'app/store/actions/loginActions';
@@ -24,48 +24,67 @@ const Notification: React.FC = () => {
   
   return (
     <>
-    <View style={styles.sidePadding}>
-    <List.Item
-    titleStyle={{fontSize:18, fontWeight:'bold'}}
-    title="Notification"
-    left={props =>  <List.Icon {...props} icon="close" />}
-    
-  />
-  
-  <List.Item style={styles.listLine}
-  title="Premier Club"
-  description="SpartSpark University Of East"
-  left={props =>  <Avatar.Image size={50} source={require('../../assets/login-bg.jpg')} />}
-  right={props => <List.Icon {...props} icon="chevron-right" />}
-  
-/>
-  
-<List.Item style={styles.listLine}
-  title="Premier Club"
-  description="SpartSpark University Of East"
 
-  left={props =>  <Avatar.Image size={50} source={require('../../assets/login-bg.jpg')} />}
-  right={props => <List.Icon {...props} icon="chevron-right" />}
-  
-/>
-  
-<List.Item style={styles.listLine}
-  title="Premier Club"
-  description="SpartSpark University Of East"
+    <Grid >
+     <Col size={15}>
+      <Text style={{color:'#000537',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
+      <Paragraph style={{color:'#000537',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
+      </Col>
+      <Col size={70}>
+      <Text style={{color:'#000537',fontSize:14,fontWeight:'bold'}}>7:00 - 9:00 AM</Text>
+      <Paragraph style={{color:'#000537',fontSize:12,}}>Sportspark University of East, Nor...</Paragraph>
+      <Paragraph style={{color:'#000537',fontSize:10,opacity:.5}}>Courts 1, 5</Paragraph>
+      <Row>
+      <Button >Accept</Button>
+      <Button >Decline</Button>
+      </Row>
+      </Col>
+      <Col size={15} onPress={showDialog2}>
+      <List.Icon icon="dots-horizontal"  />
+     </Col>
+</Grid> 
 
-  left={props =>  <Avatar.Image size={50} source={require('../../assets/login-bg.jpg')} />}
-  right={props => <List.Icon {...props} icon="chevron-right" />}
-  
-/>
-  
-<List.Item style={styles.listLine}
-  title="Premier Club"
-  description="SpartSpark University Of East"
+<Grid >
+     <Col size={15}>
+      <Text style={{color:'#000537',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
+      <Paragraph style={{color:'#000537',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
+      </Col>
+      <Col size={70}>
+      <Text style={{color:'#000537',fontSize:14,fontWeight:'bold'}}>7:00 - 9:00 AM</Text>
+      <Paragraph style={{color:'#000537',fontSize:12,}}>Sportspark University of East, Nor...</Paragraph>
+      <Paragraph style={{color:'#000537',fontSize:10,opacity:.5}}>Courts 1, 5</Paragraph>
+      <Row>
+      <Button >Accept</Button>
+      <Button >Decline</Button>
+      </Row>
+      </Col>
+      <Col size={15} onPress={showDialog2} >
+      <List.Icon icon="dots-horizontal" />
+     </Col>
+</Grid> 
 
-  left={props =>  <Avatar.Image size={50} source={require('../../assets/login-bg.jpg')} />}
-  right={props => <List.Icon {...props} icon="chevron-right" />}
-  
-/>
+
+<Grid >
+     <Col size={15}>
+      <Text style={{color:'#000537',fontSize:10,textTransform:'uppercase',textAlign:'center',marginTop:12}}>May</Text>
+      <Paragraph style={{color:'#000537',fontSize:19,textAlign:'center',marginTop:10}}>6</Paragraph>
+      </Col>
+      <Col size={70}>
+      <Text style={{color:'#000537',fontSize:14,fontWeight:'bold'}}>7:00 - 9:00 AM</Text>
+      <Paragraph style={{color:'#000537',fontSize:12,}}>Sportspark University of East, Nor...</Paragraph>
+      <Paragraph style={{color:'#000537',fontSize:10,opacity:.5}}>Courts 1, 5</Paragraph>
+      <Row>
+      <Button >Accept</Button>
+      <Button >Decline</Button>
+      </Row>
+      </Col>
+      <Col size={15} onPress={showDialog2}>
+      <List.Icon icon="dots-horizontal"  />
+     </Col>
+</Grid> 
+
+
+
 <>
            <Button onPress={showDialog2}>Modal 2</Button>
         <Dialog visible={visibles} onDismiss={hideDialog2} >
@@ -91,7 +110,7 @@ const Notification: React.FC = () => {
 />
            </Dialog>
            </>
-           </View>
+        
    </>   
    
   );

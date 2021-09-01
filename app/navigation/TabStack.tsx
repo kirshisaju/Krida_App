@@ -12,6 +12,7 @@ import PremiumClubs from "app/screens/PremiumClubs";
 //import JuniorCoaching from "app/screens/JuniorCoaching/JuniorCoaching";
 import TrainingScheduleJunior from "app/screens/TrainingScheduleJunior";
 import JuniorCoachingtHome from "app/screens/JuniorCoachingHomes";
+import Notification from "app/screens/Notification";
 
 const Stack = createStackNavigator();
 
@@ -82,7 +83,15 @@ const JuniorCoachingtHomeNavigator = () => {
     </Stack.Navigator>
   );
 }
+const NotificationNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Notification" component={Notification} />
+
+    </Stack.Navigator>
+  );
+}
 
 
 
-export { MainStackNavigator, WalletStackNavigator,PremierClubNavigator,JuniorCoachingtHomeNavigator };
+export { MainStackNavigator, WalletStackNavigator,PremierClubNavigator,JuniorCoachingtHomeNavigator,NotificationNavigator };
