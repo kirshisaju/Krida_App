@@ -37,7 +37,7 @@ const Onboarding: React.FC = () => {
  <>
  <ScrollView>
       <View style={styles.sidePadding}>
-        <Text style={{color:'#000537',fontSize:24,fontWeight:'bold',textAlign:'center',paddingTop:30}}>Edit Onboarding</Text>
+        <Text style={{color:'#000537',fontSize:24,fontWeight:'bold',textAlign:'center',paddingTop:30}}>Your Boarding </Text>
         <Paragraph style={{color:'#000537',fontSize:14,marginBottom:0,textAlign:'center',opacity:.5,paddingBottom:30}}>Badminton - Social club</Paragraph>
         <View style={{marginBottom:40}}>
         <Grid style={styles.bgwhite}>

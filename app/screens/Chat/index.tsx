@@ -22,7 +22,7 @@ const Chat: React.FC = () => {
 
   const onChangeSearch = (query: React.SetStateAction<string>) => setSearchQuery(query);
   const onSingleChat = () => NavigationService.navigate('SingleChat');
-  const onboad = () => NavigationService.navigate('Onboarding');
+  const onOnboarding = () => NavigationService.navigate('Onboarding');
   return (
  <>
  <View style={styles.sidePadding}>
@@ -67,7 +67,7 @@ const Chat: React.FC = () => {
         left={props =>  <Avatar.Icon style={styles.shield} size={34} icon="shield" />}
         right={props => <Text>12 pm</Text>}
       />
-  <Button icon="camera" mode="contained" onPress={onboad}>
+  <Button icon="camera" mode="contained" onPress={onOnboarding}>
     Press me
   </Button>
       </View>

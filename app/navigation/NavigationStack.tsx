@@ -184,6 +184,25 @@ const AuthNavigator = () => {
           headerRight: () => <ThemeController />,
         }}
       />
+          <Stack.Screen
+        name="SingleChat"
+        component={SingleChat}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+                <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
+        options={{
+          // When logging out, a pop animation feel    fault 'push' animation
+          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+          headerRight: () => <ThemeController />,
+        }}
+      />
+      
       
        
     </AuthStack.Navigator>
@@ -244,13 +263,7 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} />       
-     <Stack.Screen name="SingleChat" component={SingleChat} options={{
-                                                        title: 'SingleChat',
-                                                        headerTitleStyle: {
-                                                          fontWeight: 'bold',
-                                                        },
-                                                        headerRight: () => <ThemeController />,
-                                                        }} />       
+     
                
           <Stack.Screen name="NewClub" component={NewClub} options={{
                                                         title: 'NewClub',
@@ -273,13 +286,6 @@ const LoggedInNavigator = () => (
                                                         },
                                                         headerRight: () => <ThemeController />,
                                                         }} /> 
-           <Stack.Screen name="Onboarding" component={Onboarding} options={{
-                                                        title: 'Onboarding',
-                                                        headerTitleStyle: {
-                                                          fontWeight: 'bold',
-                                                        },
-                                                        headerRight: () => <ThemeController />,
-                                                        }} />  
                                                                                                                                                            
  <Stack.Screen name="SearchClub" component={SearchClub} options={{
                                                         title: 'SearchClub',
