@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Image, ScrollView, Switch, TouchableOpacity, View } from 'react-native';
 import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip, Card, Badge, Paragraph } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,16 +9,8 @@ import NavigationService from 'app/navigation/NavigationService';
 import styles from './styles';
 
 
-
-
-
-interface IState {
-  loginReducer: ILoginState;
-}
-
 const NewCourtBooking: React.FC = () => {
-  const id = useSelector((state: IState) => state.loginReducer.id);
-  
+
   const dispatch = useDispatch();
   const [showDropDown, setShowDropDown] = React.useState(false);
   const onClubsetup = () => NavigationService.navigate('Clubsetup');
@@ -35,7 +27,7 @@ const NewCourtBooking: React.FC = () => {
     { label: "Others", value: "others" },
   ];
   
-
+ 
   
   const sheetRef = React.useRef(null);
   return (

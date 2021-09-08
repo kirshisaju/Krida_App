@@ -18,11 +18,12 @@ const initialState: IClubState = {
   club_contact: '',
   club_user: '',
   club_logo_id: '',
-  club_inception_date: ''
+  club_inception_date: '',
+  club_services:{}
 };
 
 export const ClubReducer = createReducer(initialState, {
-  [types.LOGIN_REQUEST](state: IClubState, action: IClubRequestState) {
+  [types.CLUB_CREATE](state: IClubState, action: IClubRequestState) {
     return {
       ...state,
       club_name: action.club_name,
@@ -31,8 +32,7 @@ export const ClubReducer = createReducer(initialState, {
       club_country: action.club_country,
       club_user: action.club_user,
       club_logo_id: action.club_logo_id,
-      club_inception_date: action.club_inception_date,
-
+      club_inception_date: action.club_inception_date
     };
   },
 });

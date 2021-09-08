@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Image, SafeAreaView, ScrollView, View } from 'react-native';
 import { Text, Button, List, Avatar, Title, Dialog, TextInput, Chip } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,7 +11,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
 import DropDown from 'react-native-paper-dropdown';
 import { color } from 'react-native-reanimated';
 //import SelectDropdown from 'react-native-select-dropdown'
-
+import * as ClubActions from 'app/store/actions/ClubActions';
 
 
 interface IState {
@@ -39,7 +39,9 @@ const NewClub: React.FC = () => {
 
     { label: "Others", value: "others" },
   ];
-  
+  useEffect(() =>{
+    dispatch(ClubActions.clubcreate())
+  },[]);
   return (
     <ScrollView>
     <View style={styles.sidePadding}>
@@ -149,11 +151,7 @@ const NewClub: React.FC = () => {
    
 </View> 
   </View>
-
-
-  
    </ScrollView>   
-   
   );
 };
 

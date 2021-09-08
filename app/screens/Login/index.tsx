@@ -51,22 +51,21 @@ const Login: React.FC = () => {
 
  
   return (
-    <ImageBackground source={require('../../assets/login-bg.jpg')} style={styles.backgroundImage}>
-          <View style={styles.container}>
+          <ImageBackground source={require('../../assets/login-bg.jpg')} style={styles.backgroundImage}>
+            <View style={styles.container}>
 
               <Text style={styles.login} onPress={onLogin}></Text>
               <Image style={styles.tinyLogo} source={require('../../assets/logo.png')} />
               <Applesignup/> 
               <Grid>
                 <Row>
-                 <Facebooksignup/>
-                <Googlesignup/>
-                <Emailsignup/>
-                 <Phonesignup/>
-              
+                  <Facebooksignup/>
+                  <Googlesignup/>
+                  <Emailsignup/>
+                  <Phonesignup/>
                 </Row>
                 <Row style={styles.signins}>
-                <Text onPress={onSignUp} style={styles.signin}> Dont have an account? <Text onPress={onSignUp} style={styles.signinbtn}>SignUp</Text></Text>
+                  <Text onPress={onSignUp} style={styles.signin}> Dont have an account? <Text onPress={onSignUp} style={styles.signinbtn}>SignUp</Text></Text>
                 </Row>
               </Grid>
           

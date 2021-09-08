@@ -8,15 +8,15 @@ import { put, call } from 'redux-saga/effects';
 //import { delay } from 'redux-saga';
 
 import { Alert } from 'react-native';
-import ClubUser from 'app/services/ClubUser';
-import * as ClubcreateAction from 'app/store/actions/ClubcreateAction';
+import clubUser from 'app/services/clubUser';
+import * as ClubcreateAction from 'app/store/actions/ClubActions';
 
 // Our worker Saga that logins the user
 export default function* ClubCreateAsync( action:any ): any {
   yield put(ClubcreateAction.enableLoader());
   
   //how to call api
-  const response = yield call(ClubUser, action.token );
+  const response = yield call(clubUser, action );
   //mock response
   //const response = { success: true, data: { id: 1 }, message: 'Success' };
 
