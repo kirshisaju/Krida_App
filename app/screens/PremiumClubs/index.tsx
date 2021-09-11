@@ -44,7 +44,7 @@ const PremiumClubs: React.FC = () => {
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
   const onCreateNewExpense = () => NavigationService.navigate('CreateNewExpense');
  // const onJuniorCoachingHome = () => NavigationService.navigate('JuniorCoachingHome');
-  const onCreateNewJuniorCoacing = () => NavigationService.navigate('CreateNewJuniorCoacing');
+  
  
   
   const [gender, setGender] = React.useState();
@@ -61,14 +61,7 @@ const PremiumClubs: React.FC = () => {
   return (
 
  <ScrollView>
-  <Button 
-      icon="camera" mode="contained" onPress={onCreateNewExpense}>
-    CreateNewExpence
-  </Button>
-  <Button 
-      icon="camera" mode="contained" onPress={onCreateNewJuniorCoacing}>
-    Junior Club
-  </Button>
+
   
    <View style={styles.sidePadding}>
         
@@ -218,7 +211,7 @@ const PremiumClubs: React.FC = () => {
                 <Text style={{fontSize:14, fontWeight:'700',marginTop:0,color:'#CF3918',paddingBottom:10}}>Members</Text>
               </View>
             </Card>
-            <Card style={styles.shawdmanage} >
+            <Card style={styles.shawdmanage} onPress={onNewExpenses} >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
@@ -444,20 +437,17 @@ const PremiumClubs: React.FC = () => {
         </View>
     </View>
      </View> 
-        <Button 
+      {/*  <Button 
       icon="camera" mode="contained" onPress={onManageClub}>
     ManageClub
-  </Button>
+      </Button>  */}
 
-  <Button icon="camera" mode="contained" onPress={onStockManagement}>
-  Stock Management
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onMyClubLanding}>
+ {/*<Button icon="camera" mode="contained" onPress={onMyClubLanding}>
  My Club Landing
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onNewExpenses}>
+    </Button>  */}
+  {/*<Button icon="camera" mode="contained" onPress={onNewExpenses}>
   Select Members for the expense
-  </Button>
+  </Button>   */}
         
     </ScrollView>
 

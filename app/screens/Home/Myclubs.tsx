@@ -35,6 +35,7 @@ const Myclubs: React.FC = () => {
   const onManageClub = () => NavigationService.navigate('ManageClub');
   const onMyClubLanding = () => NavigationService.navigate('MyClubLanding');
   const onNewExpenses = () => NavigationService.navigate('NewExpenses');
+  const onCreateNewJuniorCoacing = () => NavigationService.navigate('CreateNewJuniorCoacing');
 
   const [visibles, setVisibles] = React.useState(false);
   const showDialog2 = () => setVisibles(true);
@@ -63,25 +64,8 @@ const Myclubs: React.FC = () => {
       onChangeText={onChangeSearch}
       value={searchQuery}
     /> 
-      <Button 
-      icon="camera" mode="contained" onPress={onManageClub}>
-    ManageClub
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onCourtBooking}>
-  Court Booking
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onNewCourtBooking}>
-  New Court Booking
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onStockManagement}>
-  Stock Management
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onMyClubLanding}>
- My Club Landing
-  </Button>
-  <Button icon="camera" mode="contained" onPress={onNewExpenses}>
-  Select Members for the expense
-  </Button>
+
+
 
     <Text style={styles.clubs}>My Clubs</Text>  
      <List.Item style={styles.borderClubs} onPress={onClubdetail}
@@ -91,8 +75,8 @@ const Myclubs: React.FC = () => {
         left={props =>  <Avatar.Icon size={24} icon="shield" style={styles.clubsShield}/>}
         right={props => <List.Icon {...props} icon="chevron-right" />}
       />
-      <List.Item style={styles.borderClubs}
-       titleStyle={{fontSize:15, fontWeight:'bold'}}
+      <List.Item style={styles.borderClubs} 
+       titleStyle={{fontSize:15, fontWeight:'bold'}} onPress={onCreateNewJuniorCoacing}
         title="Premier Club"
         description="SpartSpark University Of East"
         left={props =>  <Avatar.Icon size={24} icon="shield" style={styles.ShieldOrange}/>}
