@@ -175,7 +175,7 @@ const JuniorCoachingtHome: React.FC = () => {
       <View>
         <Title style={{marginTop:20, fontSize:14, fontWeight:'bold'}}>Club Management</Title>
           <View style={{flex: 1, flexDirection: 'row'}}>
-            <Card style={styles.shawdmanage} onPress={onTrainingScheduleJunior} >
+            <Card style={styles.shawdmanage} onPress={onCourtBooking} >
             <List.Item style={{paddingBottom:0}}
               title=""
               left={props => <Text></Text>}
