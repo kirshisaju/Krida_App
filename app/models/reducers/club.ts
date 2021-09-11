@@ -8,5 +8,6 @@ export interface IClubState {
   club_user: any,
   club_logo_id: any,
   club_inception_date: any,
-  club_services: any
+  club_services: any,
+  id:any
 }

@@ -5,21 +5,21 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import * as loginActions from 'app/store/actions/loginActions';
 import styles from './styles';
-import { ILoginState } from 'app/models/reducers/login';
+import { IClubState } from 'app/models/reducers/club';
 import NavigationService from 'app/navigation/NavigationService';
 import { Col, Grid, Row } from 'react-native-easy-grid';
 import DropDown from 'react-native-paper-dropdown';
 import { color } from 'react-native-reanimated';
 //import SelectDropdown from 'react-native-select-dropdown'
 import * as ClubActions from 'app/store/actions/ClubActions';
-
+import { Formik } from 'formik';
 
 interface IState {
-  loginReducer: ILoginState;
+  clubReducer: IClubState;
 }
 
 const NewClub: React.FC = () => {
-  const id = useSelector((state: IState) => state.loginReducer.id);
+ // const id = useSelector((state: IState) => state.clubReducer.id);
   
   const dispatch = useDispatch();
   const [visibles, setVisibles] = React.useState(false);
@@ -29,6 +29,7 @@ const NewClub: React.FC = () => {
   const [showDropDown, setShowDropDown] = React.useState(false);
   const onClubsetup = () => NavigationService.navigate('Clubsetup');
 
+  const onCubCreate = ( club:any ) => dispatch(ClubActions.clubcreate(club));
 
   const [gender, setGender] = React.useState();
 
@@ -39,41 +40,43 @@ const NewClub: React.FC = () => {
 
     { label: "Others", value: "others" },
   ];
-  useEffect(() =>{
-    dispatch(ClubActions.clubcreate())
-  },[]);
+  
   return (
     <ScrollView>
     <View style={styles.sidePadding}>
-   
-    
-
-  <View>
-  <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Basic Club Details</Text>
-  </View>
- 
+    <View>
+      <Text  style= {{fontSize:14,color:"#000537",fontWeight:"bold",marginTop:20,marginBottom:10}}>Basic Club Details</Text>
+    </View>
+    <Formik
+     initialValues={{ club_name: '', postal_code :'' }}
+     onSubmit={values => onCubCreate(values)}
+   >
+     {({ handleChange, handleBlur, handleSubmit, values }) => (
+       <>
     <TextInput  style = {styles.inputsfull}
         label= "Club Name" 
         mode='outlined'
         underlineColorAndroid="transparent"
+        underlineColor="transparent"
         placeholder = "Enter club name"     
+        onChangeText={handleChange('club_name')}
+        onBlur={handleBlur('club_name')}
+        value={values.club_name}
     />
     
+    <View style={{ flexDirection:'row' ,alignItems: 'flex-start',flexWrap: 'wrap'}}>
 
- 
+    <TextInput style = {styles.inputs} label= "Club Post Code" mode='outlined'
+      underlineColorAndroid = "transparent"
+      placeholder = "Enter post code"
+      placeholderTextColor = "black"
+      autoCapitalize = "none"
+      onChangeText={handleChange('postal_code')}
+      onBlur={handleBlur('postal_code')}
+      value={values.postal_code}
+    />
 
-  <View style={{ flexDirection:'row' ,alignItems: 'flex-start',flexWrap: 'wrap',}}>
- <TextInput style = {styles.inputs}  
-           label= "Club Post Code"
-           mode='outlined'
-               underlineColorAndroid = "transparent"
-               placeholder = "Enter post code"
-               placeholderTextColor = "black"
-               autoCapitalize = "none"
-              />
-
-    <Button mode="contained"  style = {{   height:40, paddingTop:2,
-   marginTop:15,backgroundColor:'#CF3918', color:'white'}}  >
+    <Button mode="contained"  style = {{   height:40, paddingTop:2, marginTop:15,backgroundColor:'#CF3918', color:'white'}}  >
     Find Address
     </Button>
 </View>    
@@ -146,10 +149,11 @@ const NewClub: React.FC = () => {
 
 </View> 
 <View style = {{ alignItems: 'center'}}> 
-      <Button mode="contained"  style = {{  backgroundColor:'#CF3918',marginTop:30,justifyContent: 'center',color:"#fff",width:"100%",
-    alignItems: 'center',marginBottom:40}}  onPress={onClubsetup} >Continue</Button>
+      <Button mode="contained" onPress={handleSubmit} style = {{  backgroundColor:'#CF3918',marginTop:30,justifyContent: 'center',color:"#fff",width:"100%",
+    alignItems: 'center',marginBottom:40}} >Continue</Button>
    
-</View> 
+</View></> )}
+</Formik>
   </View>
    </ScrollView>   
   );

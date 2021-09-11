@@ -19,6 +19,7 @@ const initialState: IClubState = {
   club_user: '',
   club_logo_id: '',
   club_inception_date: '',
+  id:'',
   club_services:{}
 };
 

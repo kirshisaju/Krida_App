@@ -4,9 +4,10 @@
 import * as types from './types';
 import { ILoginResponse } from 'app/models/api/login';
 
-export function clubcreate() {
+export function clubcreate( club:any ) {
   return {
     type: types.CLUB_CREATE,
+    club
   };
 }
 

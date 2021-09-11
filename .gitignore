@@ -13,7 +13,7 @@ android/
 
 # Compiled Python bytecode
 *.py[cod]
-
+*.zip
 # Log files
 *.log
 
